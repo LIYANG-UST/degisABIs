@@ -1,0 +1,273 @@
+{
+  "contractName": "SettlementOracle",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "id",
+          "type": "bytes32"
+        }
+      ],
+      "name": "ChainlinkCancelled",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "id",
+          "type": "bytes32"
+        }
+      ],
+      "name": "ChainlinkFulfilled",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "id",
+          "type": "bytes32"
+        }
+      ],
+      "name": "ChainlinkRequested",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.5+commit.a4f2e591\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"}],\"name\":\"ChainlinkCancelled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"}],\"name\":\"ChainlinkFulfilled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"}],\"name\":\"ChainlinkRequested\",\"type\":\"event\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/SettlementOracle.sol\":\"SettlementOracle\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@chainlink/contracts/src/v0.8/Chainlink.sol\":{\"keccak256\":\"0x12e1313c62b0dae9684b7ca52f0a05be3ddef6926f5a714ec723ef9587b08222\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f47f2c9100938369feaad91776bc4c08176cbfc4de0e5ef24929d5d4549a538b\",\"dweb:/ipfs/QmWUX7LUTDbf9AL6mB8LbWgMgzvTjTPNNbApMSB87tz9Rv\"]},\"@chainlink/contracts/src/v0.8/ChainlinkClient.sol\":{\"keccak256\":\"0x15f8b423b9a4417b916e076b77ce59bcaeee8947807b3efca9e0e864888afddf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://50719ec09477676fbf657ae524d7a56e5395d2b6724c678fa343908ee8d297f7\",\"dweb:/ipfs/QmPyzYxFHKBbs5Fa965CG7955CefJvQP8fjPn5o9Kzfi6D\"]},\"@chainlink/contracts/src/v0.8/interfaces/ChainlinkRequestInterface.sol\":{\"keccak256\":\"0xa8adfbd0326c982c38ea3808a4da52f0a51807241787c4bd28235bbe86707c04\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://364e3be6190a68fbe84e4ede560af3ccede8d36e40e91378b4de042202c6e86a\",\"dweb:/ipfs/QmNpCP9j3FhBd1hDofg1uMCYiXBKNTU95n1Lxbnnj12oxw\"]},\"@chainlink/contracts/src/v0.8/interfaces/ENSInterface.sol\":{\"keccak256\":\"0xd8545d2e73f7aa517543d97e1763d95c11ddd52a5050cf1933047c9f22f10b5a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://de663408f7c1937e46aef8d86e180a2528f31cdcbc43e1682297c20be03af461\",\"dweb:/ipfs/QmVpFw2fJkaegf6hGRYtjx932KJCs6bAuKvCRoXrhV7GMF\"]},\"@chainlink/contracts/src/v0.8/interfaces/LinkTokenInterface.sol\":{\"keccak256\":\"0x50528c237386c55ff122d047f91b32be7abe24e9dfdc609de21cd605aae83b9a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://92037bd13b34432f9377cb205c0039bd0724af66ea605598db31d4ccd33f879f\",\"dweb:/ipfs/QmdH6Ef5PZgcPrJuWboLX5MhmezzTFniZCwJ6fk2tYVua4\"]},\"@chainlink/contracts/src/v0.8/interfaces/OperatorInterface.sol\":{\"keccak256\":\"0x71dcc45bae7384cfb47c74de767a7ec56df21e165468610b2abf2bb02ca0c352\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://173fbef5a1b6d41eef13583531edf98a4a2faa2712adc049e6cf390ca104725f\",\"dweb:/ipfs/Qmd8uNSup5VQ5B6bV2ciJVxvg7ix5s9zba4PJx6DsVZcRm\"]},\"@chainlink/contracts/src/v0.8/interfaces/OracleInterface.sol\":{\"keccak256\":\"0x55fb2c156150379d285ab89081ff5add6f37343d7992bd2ec1485a2652af94d7\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://cd1fc4c0fb89f7de9ec68fdc582950c63d581f3822ef71d9a8fd240a73b37778\",\"dweb:/ipfs/QmdvboNgXzaQXMaceVQPGwpZHMC5fe9LU9GkippzA8quPJ\"]},\"@chainlink/contracts/src/v0.8/interfaces/PointerInterface.sol\":{\"keccak256\":\"0xc3d897e7c93b02e53f21b40accd4a0bd5c38f9780a4f74a7109b70fbfde03b40\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://11166ec1ac48aaf14f5a7053283371341e0418eaced385b7ed7c9140d9f1f1df\",\"dweb:/ipfs/QmV4bkHEEpeqC6pr3nmmQQURkVKMroucA31YoGcysnByt7\"]},\"@chainlink/contracts/src/v0.8/vendor/BufferChainlink.sol\":{\"keccak256\":\"0x68a67e15960462bf12313307765e619de03c73949b6ef0626785e7e76cf484af\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6859a1ea9d84cc3888dee8abb2491bc0020d9ff06ddf1d9f6a36fc1690d58a67\",\"dweb:/ipfs/QmdEeRx4rKRDtCwWcz4BP7ZkcCCx6XSYMH9Hff2baXQMww\"]},\"@chainlink/contracts/src/v0.8/vendor/CBORChainlink.sol\":{\"keccak256\":\"0xe7c6e4290ac2a41a138e6bd89d89a2779f66847a5ee6fb5a6f2a3386e5ce589d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1eb0e7821c4963b125b47c93e31cd6e073d2b87550651054fc526e63915d92ab\",\"dweb:/ipfs/QmVJq2sNTzX4Hfyway8JiY4RoQw4vQRSbzJWbsC7JsiyUs\"]},\"@chainlink/contracts/src/v0.8/vendor/ENSResolver.sol\":{\"keccak256\":\"0xeed48a6a522c400f024f8725ad931833205cb63cc87285b46c5c0e88ca090352\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://c4065aed34d3fae897ac7eb7c5e3af1ba9f458fc31c9f165acae8fa448125ec5\",\"dweb:/ipfs/Qmejzy7Kdw4mHiv5QqyvA8nUU5SeqH6n6dQoe1VEWZUnsi\"]},\"project:/contracts/SettlementOracle.sol\":{\"keccak256\":\"0x0aecabe5b0644874ff8a35ff50209a8f857b70fc43f9d4e9b4858d1d46e6b38d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://366a32225de82caf628f7418b90d3c8d8bdf8283adbc1cfa322e460827395a7d\",\"dweb:/ipfs/QmYMSGGACxDQqSMqAoMgXBjLEvcnwi1zYQsq4AHXuWKFxR\"]}},\"version\":1}",
+  "bytecode": "0x60806040526001600455348015601457600080fd5b50603f8060226000396000f3fe6080604052600080fdfea2646970667358221220294a444a829fa472b5595b62da180b70814695655a1629c884d2e5d96f31c10c64736f6c63430008050033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220294a444a829fa472b5595b62da180b70814695655a1629c884d2e5d96f31c10c64736f6c63430008050033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "117:47:42:-:0;;;1221:1:1;1190:32;;117:47:42;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "117:47:42:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.5;\n\nimport \"@chainlink/contracts/src/v0.8/ChainlinkClient.sol\";\n\ncontract SettlementOracle is ChainlinkClient {}\n",
+  "sourcePath": "/Volumes/Store/src/Degis-Contracts-1/contracts/SettlementOracle.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/SettlementOracle.sol",
+    "exportedSymbols": {
+      "BufferChainlink": [
+        1824
+      ],
+      "CBORChainlink": [
+        2249
+      ],
+      "Chainlink": [
+        268
+      ],
+      "ChainlinkClient": [
+        799
+      ],
+      "ChainlinkRequestInterface": [
+        1003
+      ],
+      "ENSInterface": [
+        1083
+      ],
+      "ENSResolver_Chainlink": [
+        2259
+      ],
+      "LinkTokenInterface": [
+        1178
+      ],
+      "OperatorInterface": [
+        1260
+      ],
+      "OracleInterface": [
+        1299
+      ],
+      "PointerInterface": [
+        1307
+      ],
+      "SettlementOracle": [
+        12985
+      ]
+    },
+    "id": 12986,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 12981,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".5"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:42"
+      },
+      {
+        "absolutePath": "@chainlink/contracts/src/v0.8/ChainlinkClient.sol",
+        "file": "@chainlink/contracts/src/v0.8/ChainlinkClient.sol",
+        "id": 12982,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 12986,
+        "sourceUnit": 800,
+        "src": "56:59:42",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 12983,
+              "name": "ChainlinkClient",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 799,
+              "src": "146:15:42"
+            },
+            "id": 12984,
+            "nodeType": "InheritanceSpecifier",
+            "src": "146:15:42"
+          }
+        ],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 12985,
+        "linearizedBaseContracts": [
+          12985,
+          799
+        ],
+        "name": "SettlementOracle",
+        "nameLocation": "126:16:42",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 12986,
+        "src": "117:47:42",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:133:42"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/SettlementOracle.sol",
+    "exportedSymbols": {
+      "BufferChainlink": [
+        1824
+      ],
+      "CBORChainlink": [
+        2249
+      ],
+      "Chainlink": [
+        268
+      ],
+      "ChainlinkClient": [
+        799
+      ],
+      "ChainlinkRequestInterface": [
+        1003
+      ],
+      "ENSInterface": [
+        1083
+      ],
+      "ENSResolver_Chainlink": [
+        2259
+      ],
+      "LinkTokenInterface": [
+        1178
+      ],
+      "OperatorInterface": [
+        1260
+      ],
+      "OracleInterface": [
+        1299
+      ],
+      "PointerInterface": [
+        1307
+      ],
+      "SettlementOracle": [
+        12985
+      ]
+    },
+    "id": 12986,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 12981,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".5"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:42"
+      },
+      {
+        "absolutePath": "@chainlink/contracts/src/v0.8/ChainlinkClient.sol",
+        "file": "@chainlink/contracts/src/v0.8/ChainlinkClient.sol",
+        "id": 12982,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 12986,
+        "sourceUnit": 800,
+        "src": "56:59:42",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 12983,
+              "name": "ChainlinkClient",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 799,
+              "src": "146:15:42"
+            },
+            "id": 12984,
+            "nodeType": "InheritanceSpecifier",
+            "src": "146:15:42"
+          }
+        ],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 12985,
+        "linearizedBaseContracts": [
+          12985,
+          799
+        ],
+        "name": "SettlementOracle",
+        "nameLocation": "126:16:42",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 12986,
+        "src": "117:47:42",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:133:42"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.5+commit.a4f2e591.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-10-20T11:20:37.836Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

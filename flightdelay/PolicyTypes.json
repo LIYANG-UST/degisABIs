@@ -1,0 +1,2192 @@
+{
+  "contractName": "PolicyTypes",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "_policyId",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "_requestId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "FulfilledOracleRequest",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "_policyID",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_userAddress",
+          "type": "address"
+        }
+      ],
+      "name": "PolicyClaimed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "_policyID",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_userAddress",
+          "type": "address"
+        }
+      ],
+      "name": "PolicyDeclined",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "_policyID",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_userAddress",
+          "type": "address"
+        }
+      ],
+      "name": "PolicyExpired",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "PolicyOwnerTransfer",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "_policyID",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_userAddress",
+          "type": "address"
+        }
+      ],
+      "name": "PolicySold",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_newSigner",
+          "type": "address"
+        }
+      ],
+      "name": "SignerAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "_policyID",
+          "type": "bytes32"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_userAddress",
+          "type": "address"
+        }
+      ],
+      "name": "newPolicyApplication",
+      "type": "event"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.5+commit.a4f2e591\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"_policyId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"_requestId\",\"type\":\"bytes32\"}],\"name\":\"FulfilledOracleRequest\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"_policyID\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_userAddress\",\"type\":\"address\"}],\"name\":\"PolicyClaimed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"_policyID\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_userAddress\",\"type\":\"address\"}],\"name\":\"PolicyDeclined\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"_policyID\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_userAddress\",\"type\":\"address\"}],\"name\":\"PolicyExpired\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_newOwner\",\"type\":\"address\"}],\"name\":\"PolicyOwnerTransfer\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"_policyID\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_userAddress\",\"type\":\"address\"}],\"name\":\"PolicySold\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_newSigner\",\"type\":\"address\"}],\"name\":\"SignerAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"_policyID\",\"type\":\"bytes32\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_userAddress\",\"type\":\"address\"}],\"name\":\"newPolicyApplication\",\"type\":\"event\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/libraries/PolicyTypes.sol\":\"PolicyTypes\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/libraries/PolicyTypes.sol\":{\"keccak256\":\"0xf20de76cdedd19fd8d599096d09b635f4030c2b5e6337f5cad37d4d8ecb18d57\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a51fe68835628a96d9886fb3758292bd9b5635512aaf16decdd56c12b08f0811\",\"dweb:/ipfs/QmPaLjmBPSj8NBeqoxJbNeq3NPj2nygUrXUoK6aVmKneQL\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212209ca9d879f13cda9d08ccf876b0c06df7980c261678f1e92029005cd54969c69c64736f6c63430008050033",
+  "deployedBytecode": "0x6080604052600080fdfea26469706673582212209ca9d879f13cda9d08ccf876b0c06df7980c261678f1e92029005cd54969c69c64736f6c63430008050033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "57:1480:54:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "57:1480:54:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract PolicyTypes {\n    enum PolicyStatus {\n        INI,\n        SOLD,\n        DECLINED,\n        EXPIRED,\n        CLAIMED\n    }\n\n    struct PolicyInfo {\n        uint256 productId; // 0: flight delay 1,2,3: future products\n        address buyerAddress; // buyer's address\n        uint256 totalOrder; // total order: 0 - N (unique for each policy)(used to link)\n        string flightNumber;\n        bytes32 policyId; // unique ID (bytes32) for this policy\n        uint256 premium;\n        uint256 payoff;\n        uint256 purchaseDate; // Unix timestamp\n        uint256 departureDate; // Unix timestamp\n        uint256 landingDate;\n        PolicyStatus status; // INI, SOLD, DECLINED, EXPIRED, CLAIMED\n        // Oracle Related\n        bool isUsed; // Whether has call the oracle\n        uint256 delayResult; // [400:cancelled] [0: on time] [0 ~ 240: delay time] [404: initial]\n    }\n\n    // Events list\n    event newPolicyApplication(bytes32 _policyID, address indexed _userAddress);\n    event PolicySold(bytes32 _policyID, address indexed _userAddress);\n    event PolicyDeclined(bytes32 _policyID, address indexed _userAddress);\n    event PolicyClaimed(bytes32 _policyID, address indexed _userAddress);\n    event PolicyExpired(bytes32 _policyID, address indexed _userAddress);\n    event FulfilledOracleRequest(bytes32 _policyId, bytes32 _requestId);\n    event PolicyOwnerTransfer(uint256 indexed _tokenId, address _newOwner);\n    event SignerAdded(address indexed _newSigner);\n}\n",
+  "sourcePath": "/Volumes/Store/src/Degis-Contracts-1/contracts/libraries/PolicyTypes.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/libraries/PolicyTypes.sol",
+    "exportedSymbols": {
+      "PolicyTypes": [
+        14514
+      ]
+    },
+    "id": 14515,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 14433,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:54"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 14514,
+        "linearizedBaseContracts": [
+          14514
+        ],
+        "name": "PolicyTypes",
+        "nameLocation": "66:11:54",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "PolicyTypes.PolicyStatus",
+            "id": 14439,
+            "members": [
+              {
+                "id": 14434,
+                "name": "INI",
+                "nameLocation": "112:3:54",
+                "nodeType": "EnumValue",
+                "src": "112:3:54"
+              },
+              {
+                "id": 14435,
+                "name": "SOLD",
+                "nameLocation": "125:4:54",
+                "nodeType": "EnumValue",
+                "src": "125:4:54"
+              },
+              {
+                "id": 14436,
+                "name": "DECLINED",
+                "nameLocation": "139:8:54",
+                "nodeType": "EnumValue",
+                "src": "139:8:54"
+              },
+              {
+                "id": 14437,
+                "name": "EXPIRED",
+                "nameLocation": "157:7:54",
+                "nodeType": "EnumValue",
+                "src": "157:7:54"
+              },
+              {
+                "id": 14438,
+                "name": "CLAIMED",
+                "nameLocation": "174:7:54",
+                "nodeType": "EnumValue",
+                "src": "174:7:54"
+              }
+            ],
+            "name": "PolicyStatus",
+            "nameLocation": "89:12:54",
+            "nodeType": "EnumDefinition",
+            "src": "84:103:54"
+          },
+          {
+            "canonicalName": "PolicyTypes.PolicyInfo",
+            "id": 14467,
+            "members": [
+              {
+                "constant": false,
+                "id": 14441,
+                "mutability": "mutable",
+                "name": "productId",
+                "nameLocation": "229:9:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "221:17:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 14440,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "221:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14443,
+                "mutability": "mutable",
+                "name": "buyerAddress",
+                "nameLocation": "298:12:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "290:20:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 14442,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "290:7:54",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14445,
+                "mutability": "mutable",
+                "name": "totalOrder",
+                "nameLocation": "347:10:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "339:18:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 14444,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "339:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14447,
+                "mutability": "mutable",
+                "name": "flightNumber",
+                "nameLocation": "435:12:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "428:19:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 14446,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "428:6:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14449,
+                "mutability": "mutable",
+                "name": "policyId",
+                "nameLocation": "465:8:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "457:16:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 14448,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "457:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14451,
+                "mutability": "mutable",
+                "name": "premium",
+                "nameLocation": "530:7:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "522:15:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 14450,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "522:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14453,
+                "mutability": "mutable",
+                "name": "payoff",
+                "nameLocation": "555:6:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "547:14:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 14452,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "547:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14455,
+                "mutability": "mutable",
+                "name": "purchaseDate",
+                "nameLocation": "579:12:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "571:20:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 14454,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "571:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14457,
+                "mutability": "mutable",
+                "name": "departureDate",
+                "nameLocation": "627:13:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "619:21:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 14456,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "619:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14459,
+                "mutability": "mutable",
+                "name": "landingDate",
+                "nameLocation": "676:11:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "668:19:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 14458,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "668:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14462,
+                "mutability": "mutable",
+                "name": "status",
+                "nameLocation": "710:6:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "697:19:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_PolicyStatus_$14439",
+                  "typeString": "enum PolicyTypes.PolicyStatus"
+                },
+                "typeName": {
+                  "id": 14461,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 14460,
+                    "name": "PolicyStatus",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 14439,
+                    "src": "697:12:54"
+                  },
+                  "referencedDeclaration": 14439,
+                  "src": "697:12:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_PolicyStatus_$14439",
+                    "typeString": "enum PolicyTypes.PolicyStatus"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14464,
+                "mutability": "mutable",
+                "name": "isUsed",
+                "nameLocation": "798:6:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "793:11:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 14463,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "793:4:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14466,
+                "mutability": "mutable",
+                "name": "delayResult",
+                "nameLocation": "853:11:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "845:19:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 14465,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "845:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "PolicyInfo",
+            "nameLocation": "200:10:54",
+            "nodeType": "StructDefinition",
+            "scope": 14514,
+            "src": "193:747:54",
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "id": 14473,
+            "name": "newPolicyApplication",
+            "nameLocation": "971:20:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14472,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14469,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_policyID",
+                  "nameLocation": "1000:9:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14473,
+                  "src": "992:17:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 14468,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "992:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14471,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_userAddress",
+                  "nameLocation": "1027:12:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14473,
+                  "src": "1011:28:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14470,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1011:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "991:49:54"
+            },
+            "src": "965:76:54"
+          },
+          {
+            "anonymous": false,
+            "id": 14479,
+            "name": "PolicySold",
+            "nameLocation": "1052:10:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14478,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14475,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_policyID",
+                  "nameLocation": "1071:9:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14479,
+                  "src": "1063:17:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 14474,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1063:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14477,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_userAddress",
+                  "nameLocation": "1098:12:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14479,
+                  "src": "1082:28:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14476,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1082:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1062:49:54"
+            },
+            "src": "1046:66:54"
+          },
+          {
+            "anonymous": false,
+            "id": 14485,
+            "name": "PolicyDeclined",
+            "nameLocation": "1123:14:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14484,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14481,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_policyID",
+                  "nameLocation": "1146:9:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1138:17:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 14480,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1138:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14483,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_userAddress",
+                  "nameLocation": "1173:12:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1157:28:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14482,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1157:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1137:49:54"
+            },
+            "src": "1117:70:54"
+          },
+          {
+            "anonymous": false,
+            "id": 14491,
+            "name": "PolicyClaimed",
+            "nameLocation": "1198:13:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14490,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14487,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_policyID",
+                  "nameLocation": "1220:9:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14491,
+                  "src": "1212:17:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 14486,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1212:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14489,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_userAddress",
+                  "nameLocation": "1247:12:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14491,
+                  "src": "1231:28:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14488,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1231:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1211:49:54"
+            },
+            "src": "1192:69:54"
+          },
+          {
+            "anonymous": false,
+            "id": 14497,
+            "name": "PolicyExpired",
+            "nameLocation": "1272:13:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14496,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14493,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_policyID",
+                  "nameLocation": "1294:9:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14497,
+                  "src": "1286:17:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 14492,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1286:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14495,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_userAddress",
+                  "nameLocation": "1321:12:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14497,
+                  "src": "1305:28:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14494,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1305:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1285:49:54"
+            },
+            "src": "1266:69:54"
+          },
+          {
+            "anonymous": false,
+            "id": 14503,
+            "name": "FulfilledOracleRequest",
+            "nameLocation": "1346:22:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14502,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14499,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_policyId",
+                  "nameLocation": "1377:9:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14503,
+                  "src": "1369:17:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 14498,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1369:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14501,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_requestId",
+                  "nameLocation": "1396:10:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14503,
+                  "src": "1388:18:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 14500,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1388:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1368:39:54"
+            },
+            "src": "1340:68:54"
+          },
+          {
+            "anonymous": false,
+            "id": 14509,
+            "name": "PolicyOwnerTransfer",
+            "nameLocation": "1419:19:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14508,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14505,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_tokenId",
+                  "nameLocation": "1455:8:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14509,
+                  "src": "1439:24:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 14504,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1439:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14507,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_newOwner",
+                  "nameLocation": "1473:9:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14509,
+                  "src": "1465:17:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14506,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1465:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1438:45:54"
+            },
+            "src": "1413:71:54"
+          },
+          {
+            "anonymous": false,
+            "id": 14513,
+            "name": "SignerAdded",
+            "nameLocation": "1495:11:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14512,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14511,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_newSigner",
+                  "nameLocation": "1523:10:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14513,
+                  "src": "1507:26:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14510,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1507:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1506:28:54"
+            },
+            "src": "1489:46:54"
+          }
+        ],
+        "scope": 14515,
+        "src": "57:1480:54",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:1506:54"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/libraries/PolicyTypes.sol",
+    "exportedSymbols": {
+      "PolicyTypes": [
+        14514
+      ]
+    },
+    "id": 14515,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 14433,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:54"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 14514,
+        "linearizedBaseContracts": [
+          14514
+        ],
+        "name": "PolicyTypes",
+        "nameLocation": "66:11:54",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "PolicyTypes.PolicyStatus",
+            "id": 14439,
+            "members": [
+              {
+                "id": 14434,
+                "name": "INI",
+                "nameLocation": "112:3:54",
+                "nodeType": "EnumValue",
+                "src": "112:3:54"
+              },
+              {
+                "id": 14435,
+                "name": "SOLD",
+                "nameLocation": "125:4:54",
+                "nodeType": "EnumValue",
+                "src": "125:4:54"
+              },
+              {
+                "id": 14436,
+                "name": "DECLINED",
+                "nameLocation": "139:8:54",
+                "nodeType": "EnumValue",
+                "src": "139:8:54"
+              },
+              {
+                "id": 14437,
+                "name": "EXPIRED",
+                "nameLocation": "157:7:54",
+                "nodeType": "EnumValue",
+                "src": "157:7:54"
+              },
+              {
+                "id": 14438,
+                "name": "CLAIMED",
+                "nameLocation": "174:7:54",
+                "nodeType": "EnumValue",
+                "src": "174:7:54"
+              }
+            ],
+            "name": "PolicyStatus",
+            "nameLocation": "89:12:54",
+            "nodeType": "EnumDefinition",
+            "src": "84:103:54"
+          },
+          {
+            "canonicalName": "PolicyTypes.PolicyInfo",
+            "id": 14467,
+            "members": [
+              {
+                "constant": false,
+                "id": 14441,
+                "mutability": "mutable",
+                "name": "productId",
+                "nameLocation": "229:9:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "221:17:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 14440,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "221:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14443,
+                "mutability": "mutable",
+                "name": "buyerAddress",
+                "nameLocation": "298:12:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "290:20:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 14442,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "290:7:54",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14445,
+                "mutability": "mutable",
+                "name": "totalOrder",
+                "nameLocation": "347:10:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "339:18:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 14444,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "339:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14447,
+                "mutability": "mutable",
+                "name": "flightNumber",
+                "nameLocation": "435:12:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "428:19:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 14446,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "428:6:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14449,
+                "mutability": "mutable",
+                "name": "policyId",
+                "nameLocation": "465:8:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "457:16:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 14448,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "457:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14451,
+                "mutability": "mutable",
+                "name": "premium",
+                "nameLocation": "530:7:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "522:15:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 14450,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "522:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14453,
+                "mutability": "mutable",
+                "name": "payoff",
+                "nameLocation": "555:6:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "547:14:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 14452,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "547:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14455,
+                "mutability": "mutable",
+                "name": "purchaseDate",
+                "nameLocation": "579:12:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "571:20:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 14454,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "571:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14457,
+                "mutability": "mutable",
+                "name": "departureDate",
+                "nameLocation": "627:13:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "619:21:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 14456,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "619:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14459,
+                "mutability": "mutable",
+                "name": "landingDate",
+                "nameLocation": "676:11:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "668:19:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 14458,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "668:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14462,
+                "mutability": "mutable",
+                "name": "status",
+                "nameLocation": "710:6:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "697:19:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_PolicyStatus_$14439",
+                  "typeString": "enum PolicyTypes.PolicyStatus"
+                },
+                "typeName": {
+                  "id": 14461,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 14460,
+                    "name": "PolicyStatus",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 14439,
+                    "src": "697:12:54"
+                  },
+                  "referencedDeclaration": 14439,
+                  "src": "697:12:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_PolicyStatus_$14439",
+                    "typeString": "enum PolicyTypes.PolicyStatus"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14464,
+                "mutability": "mutable",
+                "name": "isUsed",
+                "nameLocation": "798:6:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "793:11:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 14463,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "793:4:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14466,
+                "mutability": "mutable",
+                "name": "delayResult",
+                "nameLocation": "853:11:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 14467,
+                "src": "845:19:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 14465,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "845:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "PolicyInfo",
+            "nameLocation": "200:10:54",
+            "nodeType": "StructDefinition",
+            "scope": 14514,
+            "src": "193:747:54",
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "id": 14473,
+            "name": "newPolicyApplication",
+            "nameLocation": "971:20:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14472,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14469,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_policyID",
+                  "nameLocation": "1000:9:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14473,
+                  "src": "992:17:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 14468,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "992:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14471,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_userAddress",
+                  "nameLocation": "1027:12:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14473,
+                  "src": "1011:28:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14470,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1011:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "991:49:54"
+            },
+            "src": "965:76:54"
+          },
+          {
+            "anonymous": false,
+            "id": 14479,
+            "name": "PolicySold",
+            "nameLocation": "1052:10:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14478,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14475,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_policyID",
+                  "nameLocation": "1071:9:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14479,
+                  "src": "1063:17:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 14474,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1063:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14477,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_userAddress",
+                  "nameLocation": "1098:12:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14479,
+                  "src": "1082:28:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14476,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1082:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1062:49:54"
+            },
+            "src": "1046:66:54"
+          },
+          {
+            "anonymous": false,
+            "id": 14485,
+            "name": "PolicyDeclined",
+            "nameLocation": "1123:14:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14484,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14481,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_policyID",
+                  "nameLocation": "1146:9:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1138:17:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 14480,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1138:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14483,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_userAddress",
+                  "nameLocation": "1173:12:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14485,
+                  "src": "1157:28:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14482,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1157:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1137:49:54"
+            },
+            "src": "1117:70:54"
+          },
+          {
+            "anonymous": false,
+            "id": 14491,
+            "name": "PolicyClaimed",
+            "nameLocation": "1198:13:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14490,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14487,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_policyID",
+                  "nameLocation": "1220:9:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14491,
+                  "src": "1212:17:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 14486,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1212:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14489,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_userAddress",
+                  "nameLocation": "1247:12:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14491,
+                  "src": "1231:28:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14488,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1231:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1211:49:54"
+            },
+            "src": "1192:69:54"
+          },
+          {
+            "anonymous": false,
+            "id": 14497,
+            "name": "PolicyExpired",
+            "nameLocation": "1272:13:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14496,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14493,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_policyID",
+                  "nameLocation": "1294:9:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14497,
+                  "src": "1286:17:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 14492,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1286:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14495,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_userAddress",
+                  "nameLocation": "1321:12:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14497,
+                  "src": "1305:28:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14494,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1305:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1285:49:54"
+            },
+            "src": "1266:69:54"
+          },
+          {
+            "anonymous": false,
+            "id": 14503,
+            "name": "FulfilledOracleRequest",
+            "nameLocation": "1346:22:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14502,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14499,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_policyId",
+                  "nameLocation": "1377:9:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14503,
+                  "src": "1369:17:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 14498,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1369:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14501,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_requestId",
+                  "nameLocation": "1396:10:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14503,
+                  "src": "1388:18:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 14500,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1388:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1368:39:54"
+            },
+            "src": "1340:68:54"
+          },
+          {
+            "anonymous": false,
+            "id": 14509,
+            "name": "PolicyOwnerTransfer",
+            "nameLocation": "1419:19:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14508,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14505,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_tokenId",
+                  "nameLocation": "1455:8:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14509,
+                  "src": "1439:24:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 14504,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1439:7:54",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14507,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "_newOwner",
+                  "nameLocation": "1473:9:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14509,
+                  "src": "1465:17:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14506,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1465:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1438:45:54"
+            },
+            "src": "1413:71:54"
+          },
+          {
+            "anonymous": false,
+            "id": 14513,
+            "name": "SignerAdded",
+            "nameLocation": "1495:11:54",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14512,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14511,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "_newSigner",
+                  "nameLocation": "1523:10:54",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14513,
+                  "src": "1507:26:54",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 14510,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1507:7:54",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1506:28:54"
+            },
+            "src": "1489:46:54"
+          }
+        ],
+        "scope": 14515,
+        "src": "57:1480:54",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:1506:54"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.5+commit.a4f2e591.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-11-01T07:11:13.098Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

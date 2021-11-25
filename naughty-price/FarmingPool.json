@@ -1,0 +1,117 @@
+{
+  "contractName": "FarmingPool",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/FarmingPool.sol\":\"FarmingPool\"},\"evmVersion\":\"constantinople\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/FarmingPool.sol\":{\"keccak256\":\"0x8220e0fd2b72d096454918dda272b638e862ad9427512a30eeab672c80b579fb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://926f081b4d5bb0fcded22951558ed8567806c5cf30b0c784d9145a56402cbb67\",\"dweb:/ipfs/QmYYsrKNcP3subLDRJmjRujoQDnGDvF2xYUyXmsm9QjLgE\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea264697066735822122018565f515fe007bbb6cb1af80a3a96353aaf2e0569b1cade27c9612311124c1664736f6c63430008090033",
+  "deployedBytecode": "0x6080604052600080fdfea264697066735822122018565f515fe007bbb6cb1af80a3a96353aaf2e0569b1cade27c9612311124c1664736f6c63430008090033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "56:23:9:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "56:23:9:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.9;\n\ncontract FarmingPool {}\n",
+  "sourcePath": "/Volumes/Store/src/naughty-price/contracts/FarmingPool.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/FarmingPool.sol",
+    "exportedSymbols": {
+      "FarmingPool": [
+        3337
+      ]
+    },
+    "id": 3338,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3336,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:9"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "FarmingPool",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 3337,
+        "linearizedBaseContracts": [
+          3337
+        ],
+        "name": "FarmingPool",
+        "nameLocation": "65:11:9",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 3338,
+        "src": "56:23:9",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:48:9"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/FarmingPool.sol",
+    "exportedSymbols": {
+      "FarmingPool": [
+        3337
+      ]
+    },
+    "id": 3338,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3336,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:22:9"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "FarmingPool",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 3337,
+        "linearizedBaseContracts": [
+          3337
+        ],
+        "name": "FarmingPool",
+        "nameLocation": "65:11:9",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 3338,
+        "src": "56:23:9",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:48:9"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.9+commit.e5eed63a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-11-25T06:50:53.864Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

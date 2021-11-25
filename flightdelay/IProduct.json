@@ -1,0 +1,342 @@
+{
+  "contractName": "IProduct",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "productId",
+          "type": "uint256"
+        }
+      ],
+      "name": "NewProduct",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "newProduct",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.5+commit.a4f2e591\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"productId\",\"type\":\"uint256\"}],\"name\":\"NewProduct\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"newProduct\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IProduct.sol\":\"IProduct\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IProduct.sol\":{\"keccak256\":\"0xbbf1bf6cfb3f14dd3afaba80378bd9fd31f5f516d6baa5ccd6ba47ba587d05d8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://661c5a834a8a3a8cacc5c9f02ce12f48e4bb19c8951957fe205c211f6b8930c9\",\"dweb:/ipfs/QmebBfCE1fZnw46T1DzYPAEVF4akTDYANQEY6GZtB73c9d\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ninterface IProduct {\n    event NewProduct(uint256 productId);\n\n    function newProduct() external returns (uint256);\n}\n",
+  "sourcePath": "/Volumes/Store/src/Degis-Contracts-1/contracts/interfaces/IProduct.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IProduct.sol",
+    "exportedSymbols": {
+      "IProduct": [
+        14355
+      ]
+    },
+    "id": 14356,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 14345,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:55"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 14355,
+        "linearizedBaseContracts": [
+          14355
+        ],
+        "name": "IProduct",
+        "nameLocation": "67:8:55",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "id": 14349,
+            "name": "NewProduct",
+            "nameLocation": "88:10:55",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14348,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14347,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "productId",
+                  "nameLocation": "107:9:55",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14349,
+                  "src": "99:17:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 14346,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "99:7:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "98:19:55"
+            },
+            "src": "82:36:55"
+          },
+          {
+            "functionSelector": "479c2b27",
+            "id": 14354,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "newProduct",
+            "nameLocation": "133:10:55",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14350,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "143:2:55"
+            },
+            "returnParameters": {
+              "id": 14353,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14352,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14354,
+                  "src": "164:7:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 14351,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "164:7:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "163:9:55"
+            },
+            "scope": 14355,
+            "src": "124:49:55",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 14356,
+        "src": "57:118:55",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:144:55"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IProduct.sol",
+    "exportedSymbols": {
+      "IProduct": [
+        14355
+      ]
+    },
+    "id": 14356,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 14345,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:55"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 14355,
+        "linearizedBaseContracts": [
+          14355
+        ],
+        "name": "IProduct",
+        "nameLocation": "67:8:55",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "id": 14349,
+            "name": "NewProduct",
+            "nameLocation": "88:10:55",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 14348,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14347,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "productId",
+                  "nameLocation": "107:9:55",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14349,
+                  "src": "99:17:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 14346,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "99:7:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "98:19:55"
+            },
+            "src": "82:36:55"
+          },
+          {
+            "functionSelector": "479c2b27",
+            "id": 14354,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "newProduct",
+            "nameLocation": "133:10:55",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14350,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "143:2:55"
+            },
+            "returnParameters": {
+              "id": 14353,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14352,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14354,
+                  "src": "164:7:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 14351,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "164:7:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "163:9:55"
+            },
+            "scope": 14355,
+            "src": "124:49:55",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 14356,
+        "src": "57:118:55",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:144:55"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.5+commit.a4f2e591.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-11-02T06:40:33.755Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
