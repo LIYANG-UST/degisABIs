@@ -10622,7 +10622,7 @@
         694
       ],
       "INaughtyFactory": [
-        6986
+        6992
       ],
       "NaughtyPair": [
         4401
@@ -10721,7 +10721,7 @@
         1462
       ],
       "PoolLPToken": [
-        6607
+        6613
       ],
       "SafeERC20": [
         918
@@ -10748,7 +10748,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 4402,
-        "sourceUnit": 6608,
+        "sourceUnit": 6614,
         "src": "56:27:12",
         "symbolAliases": [],
         "unitAlias": ""
@@ -10796,7 +10796,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 4402,
-        "sourceUnit": 6987,
+        "sourceUnit": 6993,
         "src": "248:42:12",
         "symbolAliases": [],
         "unitAlias": ""
@@ -10809,7 +10809,7 @@
               "id": 3710,
               "name": "PoolLPToken",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 6607,
+              "referencedDeclaration": 6613,
               "src": "316:11:12"
             },
             "id": 3711,
@@ -10824,7 +10824,7 @@
         "id": 4401,
         "linearizedBaseContracts": [
           4401,
-          6607,
+          6613,
           591,
           694,
           669,
@@ -13674,7 +13674,7 @@
                             "name": "LPMint",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6581,
+                            "referencedDeclaration": 6587,
                             "src": "3380:6:12",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -13856,7 +13856,7 @@
                       "name": "LPMint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6581,
+                      "referencedDeclaration": 6587,
                       "src": "3728:6:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -14512,7 +14512,7 @@
                       "name": "LPBalanceOf",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6606,
+                      "referencedDeclaration": 6612,
                       "src": "5524:11:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_uint256_$",
@@ -15103,7 +15103,7 @@
                       "name": "LPBurn",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6594,
+                      "referencedDeclaration": 6600,
                       "src": "6026:6:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -20171,7 +20171,7 @@
         694
       ],
       "INaughtyFactory": [
-        6986
+        6992
       ],
       "NaughtyPair": [
         4401
@@ -20270,7 +20270,7 @@
         1462
       ],
       "PoolLPToken": [
-        6607
+        6613
       ],
       "SafeERC20": [
         918
@@ -20297,7 +20297,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 4402,
-        "sourceUnit": 6608,
+        "sourceUnit": 6614,
         "src": "56:27:12",
         "symbolAliases": [],
         "unitAlias": ""
@@ -20345,7 +20345,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 4402,
-        "sourceUnit": 6987,
+        "sourceUnit": 6993,
         "src": "248:42:12",
         "symbolAliases": [],
         "unitAlias": ""
@@ -20358,7 +20358,7 @@
               "id": 3710,
               "name": "PoolLPToken",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 6607,
+              "referencedDeclaration": 6613,
               "src": "316:11:12"
             },
             "id": 3711,
@@ -20373,7 +20373,7 @@
         "id": 4401,
         "linearizedBaseContracts": [
           4401,
-          6607,
+          6613,
           591,
           694,
           669,
@@ -23223,7 +23223,7 @@
                             "name": "LPMint",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 6581,
+                            "referencedDeclaration": 6587,
                             "src": "3380:6:12",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -23405,7 +23405,7 @@
                       "name": "LPMint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6581,
+                      "referencedDeclaration": 6587,
                       "src": "3728:6:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -24061,7 +24061,7 @@
                       "name": "LPBalanceOf",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6606,
+                      "referencedDeclaration": 6612,
                       "src": "5524:11:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_uint256_$",
@@ -24652,7 +24652,7 @@
                       "name": "LPBurn",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 6594,
+                      "referencedDeclaration": 6600,
                       "src": "6026:6:12",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -29707,7 +29707,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-11-26T07:10:27.693Z",
+  "updatedAt": "2021-11-26T07:41:20.356Z",
   "devdoc": {
     "kind": "dev",
     "methods": {
