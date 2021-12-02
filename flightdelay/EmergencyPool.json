@@ -80,8 +80,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -94,8 +93,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -6596,7 +6594,7 @@
         2987
       ],
       "IEmergencyPool": [
-        13515
+        13522
       ],
       "SafeERC20": [
         3441
@@ -6635,7 +6633,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 9013,
-        "sourceUnit": 13516,
+        "sourceUnit": 13523,
         "src": "122:41:37",
         "symbolAliases": [],
         "unitAlias": ""
@@ -6648,7 +6646,7 @@
               "id": 8880,
               "name": "IEmergencyPool",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 13515,
+              "referencedDeclaration": 13522,
               "src": "573:14:37"
             },
             "id": 8881,
@@ -6669,7 +6667,7 @@
         "id": 9012,
         "linearizedBaseContracts": [
           9012,
-          13515
+          13522
         ],
         "name": "EmergencyPool",
         "nameLocation": "556:13:37",
@@ -6735,7 +6733,7 @@
           },
           {
             "baseFunctions": [
-              13496
+              13503
             ],
             "constant": false,
             "functionSelector": "06fdde03",
@@ -7099,7 +7097,7 @@
                       "name": "OwnershipTransferred",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13491,
+                      "referencedDeclaration": 13498,
                       "src": "1171:20:37",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
@@ -7204,7 +7202,7 @@
           },
           {
             "baseFunctions": [
-              13505
+              13512
             ],
             "body": {
               "id": 8964,
@@ -7560,7 +7558,7 @@
                       "name": "Deposit",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13479,
+                      "referencedDeclaration": 13486,
                       "src": "1700:7:37",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -7706,7 +7704,7 @@
           },
           {
             "baseFunctions": [
-              13514
+              13521
             ],
             "body": {
               "id": 9010,
@@ -8178,7 +8176,7 @@
                       "name": "Withdraw",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13487,
+                      "referencedDeclaration": 13494,
                       "src": "2392:8:37",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -8357,7 +8355,7 @@
         2987
       ],
       "IEmergencyPool": [
-        13515
+        13522
       ],
       "SafeERC20": [
         3441
@@ -8396,7 +8394,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 9013,
-        "sourceUnit": 13516,
+        "sourceUnit": 13523,
         "src": "122:41:37",
         "symbolAliases": [],
         "unitAlias": ""
@@ -8409,7 +8407,7 @@
               "id": 8880,
               "name": "IEmergencyPool",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 13515,
+              "referencedDeclaration": 13522,
               "src": "573:14:37"
             },
             "id": 8881,
@@ -8430,7 +8428,7 @@
         "id": 9012,
         "linearizedBaseContracts": [
           9012,
-          13515
+          13522
         ],
         "name": "EmergencyPool",
         "nameLocation": "556:13:37",
@@ -8496,7 +8494,7 @@
           },
           {
             "baseFunctions": [
-              13496
+              13503
             ],
             "constant": false,
             "functionSelector": "06fdde03",
@@ -8860,7 +8858,7 @@
                       "name": "OwnershipTransferred",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13491,
+                      "referencedDeclaration": 13498,
                       "src": "1171:20:37",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
@@ -8965,7 +8963,7 @@
           },
           {
             "baseFunctions": [
-              13505
+              13512
             ],
             "body": {
               "id": 8964,
@@ -9321,7 +9319,7 @@
                       "name": "Deposit",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13479,
+                      "referencedDeclaration": 13486,
                       "src": "1700:7:37",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -9467,7 +9465,7 @@
           },
           {
             "baseFunctions": [
-              13514
+              13521
             ],
             "body": {
               "id": 9010,
@@ -9939,7 +9937,7 @@
                       "name": "Withdraw",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13487,
+                      "referencedDeclaration": 13494,
                       "src": "2392:8:37",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
@@ -10118,8 +10116,7 @@
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-11-29T11:46:59.717Z",
-  "networkType": "ethereum",
+  "updatedAt": "2021-12-02T08:12:03.522Z",
   "devdoc": {
     "kind": "dev",
     "methods": {

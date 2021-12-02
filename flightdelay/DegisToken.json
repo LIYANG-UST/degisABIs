@@ -17461,7 +17461,7 @@
         3181
       ],
       "IDegisToken": [
-        13469
+        13476
       ],
       "IERC20": [
         2987
@@ -17506,7 +17506,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 8875,
-        "sourceUnit": 13470,
+        "sourceUnit": 13477,
         "src": "135:38:36",
         "symbolAliases": [],
         "unitAlias": ""
@@ -17531,7 +17531,7 @@
               "id": 8436,
               "name": "IDegisToken",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 13469,
+              "referencedDeclaration": 13476,
               "src": "793:11:36"
             },
             "id": 8437,
@@ -17552,7 +17552,7 @@
         "id": 8874,
         "linearizedBaseContracts": [
           8874,
-          13469,
+          13476,
           3181,
           5888,
           3217,
@@ -18815,7 +18815,7 @@
           },
           {
             "baseFunctions": [
-              13385
+              13392
             ],
             "body": {
               "id": 8546,
@@ -18904,7 +18904,7 @@
           },
           {
             "baseFunctions": [
-              13430
+              13437
             ],
             "body": {
               "id": 8563,
@@ -19015,7 +19015,7 @@
                       "name": "CloseOwnerMint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13468,
+                      "referencedDeclaration": 13475,
                       "src": "2711:14:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -19091,7 +19091,7 @@
           },
           {
             "baseFunctions": [
-              13390
+              13397
             ],
             "body": {
               "id": 8591,
@@ -19327,7 +19327,7 @@
                       "name": "MinterAdded",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13434,
+                      "referencedDeclaration": 13441,
                       "src": "3099:11:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
@@ -19432,7 +19432,7 @@
           },
           {
             "baseFunctions": [
-              13395
+              13402
             ],
             "body": {
               "id": 8667,
@@ -20232,7 +20232,7 @@
                       "name": "MinterRemoved",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13438,
+                      "referencedDeclaration": 13445,
                       "src": "3755:13:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
@@ -20337,7 +20337,7 @@
           },
           {
             "baseFunctions": [
-              13400
+              13407
             ],
             "body": {
               "id": 8695,
@@ -20573,7 +20573,7 @@
                       "name": "BurnerAdded",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13442,
+                      "referencedDeclaration": 13449,
                       "src": "4133:11:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
@@ -20678,7 +20678,7 @@
           },
           {
             "baseFunctions": [
-              13405
+              13412
             ],
             "body": {
               "id": 8771,
@@ -21478,7 +21478,7 @@
                       "name": "BurnerRemoved",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13446,
+                      "referencedDeclaration": 13453,
                       "src": "4789:13:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
@@ -21583,7 +21583,7 @@
           },
           {
             "baseFunctions": [
-              13410
+              13417
             ],
             "body": {
               "id": 8790,
@@ -21690,7 +21690,7 @@
                       "name": "OwnerChanged",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13452,
+                      "referencedDeclaration": 13459,
                       "src": "5077:12:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
@@ -21795,7 +21795,7 @@
           },
           {
             "baseFunctions": [
-              13413
+              13420
             ],
             "body": {
               "id": 8809,
@@ -21934,7 +21934,7 @@
                       "name": "ReleaseOwnership",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13456,
+                      "referencedDeclaration": 13463,
                       "src": "5304:16:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
@@ -22010,7 +22010,7 @@
           },
           {
             "baseFunctions": [
-              13420
+              13427
             ],
             "body": {
               "id": 8830,
@@ -22363,7 +22363,7 @@
                       "name": "MintByOwner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13462,
+                      "referencedDeclaration": 13469,
                       "src": "6028:11:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -22522,7 +22522,7 @@
           },
           {
             "baseFunctions": [
-              13427
+              13434
             ],
             "body": {
               "id": 8872,
@@ -22763,7 +22763,7 @@
         3181
       ],
       "IDegisToken": [
-        13469
+        13476
       ],
       "IERC20": [
         2987
@@ -22808,7 +22808,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 8875,
-        "sourceUnit": 13470,
+        "sourceUnit": 13477,
         "src": "135:38:36",
         "symbolAliases": [],
         "unitAlias": ""
@@ -22833,7 +22833,7 @@
               "id": 8436,
               "name": "IDegisToken",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 13469,
+              "referencedDeclaration": 13476,
               "src": "793:11:36"
             },
             "id": 8437,
@@ -22854,7 +22854,7 @@
         "id": 8874,
         "linearizedBaseContracts": [
           8874,
-          13469,
+          13476,
           3181,
           5888,
           3217,
@@ -24117,7 +24117,7 @@
           },
           {
             "baseFunctions": [
-              13385
+              13392
             ],
             "body": {
               "id": 8546,
@@ -24206,7 +24206,7 @@
           },
           {
             "baseFunctions": [
-              13430
+              13437
             ],
             "body": {
               "id": 8563,
@@ -24317,7 +24317,7 @@
                       "name": "CloseOwnerMint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13468,
+                      "referencedDeclaration": 13475,
                       "src": "2711:14:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -24393,7 +24393,7 @@
           },
           {
             "baseFunctions": [
-              13390
+              13397
             ],
             "body": {
               "id": 8591,
@@ -24629,7 +24629,7 @@
                       "name": "MinterAdded",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13434,
+                      "referencedDeclaration": 13441,
                       "src": "3099:11:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
@@ -24734,7 +24734,7 @@
           },
           {
             "baseFunctions": [
-              13395
+              13402
             ],
             "body": {
               "id": 8667,
@@ -25534,7 +25534,7 @@
                       "name": "MinterRemoved",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13438,
+                      "referencedDeclaration": 13445,
                       "src": "3755:13:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
@@ -25639,7 +25639,7 @@
           },
           {
             "baseFunctions": [
-              13400
+              13407
             ],
             "body": {
               "id": 8695,
@@ -25875,7 +25875,7 @@
                       "name": "BurnerAdded",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13442,
+                      "referencedDeclaration": 13449,
                       "src": "4133:11:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
@@ -25980,7 +25980,7 @@
           },
           {
             "baseFunctions": [
-              13405
+              13412
             ],
             "body": {
               "id": 8771,
@@ -26780,7 +26780,7 @@
                       "name": "BurnerRemoved",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13446,
+                      "referencedDeclaration": 13453,
                       "src": "4789:13:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
@@ -26885,7 +26885,7 @@
           },
           {
             "baseFunctions": [
-              13410
+              13417
             ],
             "body": {
               "id": 8790,
@@ -26992,7 +26992,7 @@
                       "name": "OwnerChanged",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13452,
+                      "referencedDeclaration": 13459,
                       "src": "5077:12:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
@@ -27097,7 +27097,7 @@
           },
           {
             "baseFunctions": [
-              13413
+              13420
             ],
             "body": {
               "id": 8809,
@@ -27236,7 +27236,7 @@
                       "name": "ReleaseOwnership",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13456,
+                      "referencedDeclaration": 13463,
                       "src": "5304:16:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
@@ -27312,7 +27312,7 @@
           },
           {
             "baseFunctions": [
-              13420
+              13427
             ],
             "body": {
               "id": 8830,
@@ -27665,7 +27665,7 @@
                       "name": "MintByOwner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 13462,
+                      "referencedDeclaration": 13469,
                       "src": "6028:11:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -27824,7 +27824,7 @@
           },
           {
             "baseFunctions": [
-              13427
+              13434
             ],
             "body": {
               "id": 8872,
@@ -28046,8 +28046,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-11-29T11:46:59.635Z",
-  "networkType": "ethereum",
+  "updatedAt": "2021-12-02T08:12:03.494Z",
   "devdoc": {
     "kind": "dev",
     "methods": {
