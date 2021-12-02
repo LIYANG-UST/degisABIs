@@ -1,0 +1,117 @@
+{
+  "contractName": "IDegisBar",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.5+commit.a4f2e591\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IDegisBar.sol\":\"IDegisBar\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IDegisBar.sol\":{\"keccak256\":\"0x3189ddc330a6b7f2d23d613d615cefb6b5558167212eb68dd76c3596b1672857\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://17a0014ba288df2a2b2d8161d72de8389723b27d5b605b77ffc1661addb66f73\",\"dweb:/ipfs/QmfJhUfkSHAweZN6g9q38tj8xvyB7Y5fiVRKEZFSpxCbMm\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity ^0.8.0;\r\n\r\ninterface IDegisBar {}\r\n",
+  "sourcePath": "D:\\src\\Degis-Contracts-1\\contracts\\interfaces\\IDegisBar.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IDegisBar.sol",
+    "exportedSymbols": {
+      "IDegisBar": [
+        12916
+      ]
+    },
+    "id": 12917,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 12915,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:23:43"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 12916,
+        "linearizedBaseContracts": [
+          12916
+        ],
+        "name": "IDegisBar",
+        "nameLocation": "72:9:43",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 12917,
+        "src": "62:22:43",
+        "usedErrors": []
+      }
+    ],
+    "src": "35:51:43"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IDegisBar.sol",
+    "exportedSymbols": {
+      "IDegisBar": [
+        12916
+      ]
+    },
+    "id": 12917,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 12915,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:23:43"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 12916,
+        "linearizedBaseContracts": [
+          12916
+        ],
+        "name": "IDegisBar",
+        "nameLocation": "72:9:43",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 12917,
+        "src": "62:22:43",
+        "usedErrors": []
+      }
+    ],
+    "src": "35:51:43"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.5+commit.a4f2e591.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-09-17T12:53:52.498Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

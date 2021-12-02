@@ -1164,20 +1164,20 @@
   "sourceMap": "56:1578:42:-:0;;;222:6;201:27;;56:1578;;;;;;;;;;;;;;;;",
   "deployedSourceMap": "56:1578:42:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;90:25;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;1131:28;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;1595:36;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;1411:32;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;121:28;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;156:38;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;843:22;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;1044:33;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;1228:26;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;1296:31;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;913:34;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;1514:29;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;90:25;;;;;;;;;;;;:::o;1131:28::-;;;;:::o;1595:36::-;;;;;;;;;;;;;;;;;;;;:::o;1411:32::-;;;;:::o;121:28::-;;;;;;;;;;;;;:::o;156:38::-;;;;:::o;843:22::-;;;;:::o;1044:33::-;;;;:::o;1228:26::-;;;;:::o;1296:31::-;;;;:::o;913:34::-;;;;:::o;1514:29::-;;;;:::o;7:126:62:-;44:7;84:42;77:5;73:54;62:65;;7:126;;;:::o;139:96::-;176:7;205:24;223:5;205:24;:::i;:::-;194:35;;139:96;;;:::o;241:118::-;328:24;346:5;328:24;:::i;:::-;323:3;316:37;241:118;;:::o;365:222::-;458:4;496:2;485:9;481:18;473:26;;509:71;577:1;566:9;562:17;553:6;509:71;:::i;:::-;365:222;;;;:::o;593:77::-;630:7;659:5;648:16;;593:77;;;:::o;676:118::-;763:24;781:5;763:24;:::i;:::-;758:3;751:37;676:118;;:::o;800:222::-;893:4;931:2;920:9;916:18;908:26;;944:71;1012:1;1001:9;997:17;988:6;944:71;:::i;:::-;800:222;;;;:::o;1109:117::-;1218:1;1215;1208:12;1355:122;1428:24;1446:5;1428:24;:::i;:::-;1421:5;1418:35;1408:63;;1467:1;1464;1457:12;1408:63;1355:122;:::o;1483:139::-;1529:5;1567:6;1554:20;1545:29;;1583:33;1610:5;1583:33;:::i;:::-;1483:139;;;;:::o;1628:329::-;1687:6;1736:2;1724:9;1715:7;1711:23;1707:32;1704:119;;;1742:79;;:::i;:::-;1704:119;1862:1;1887:53;1932:7;1923:6;1912:9;1908:22;1887:53;:::i;:::-;1877:63;;1833:117;1628:329;;;;:::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.9;\n\ncontract InsurancePoolStore {\n    address public policyFlow;\n    address public emergencyPool;\n\n    uint256 public purchaseIncentiveAmount;\n\n    uint256 frozenTime = 7 days; // 7 days\n\n    struct UserInfo {\n        uint256 depositTime;\n        uint256 pendingBalance; // the amount in the unstake queue\n    }\n    mapping(address => UserInfo) userInfo;\n\n    //  of every unstake request in the queue\n    struct UnstakeRequest {\n        uint256 pendingAmount;\n        uint256 fulfilledAmount;\n        bool isPaidOut; // if this request has been fully paid out // maybe redundant\n    }\n\n    // a user's unstake requests\n    mapping(address => UnstakeRequest[]) internal unstakeRequests;\n\n    // list of all unstake users\n    address[] internal unstakeQueue;\n\n    // 1 LP = LPValue(USD)\n    uint256 public LPValue;\n\n    // Total staking balance of the pool\n    uint256 public totalStakingBalance;\n\n    // Real staking balance = current staking balance - sum(unstake request in the queue)\n    uint256 public realStakingBalance;\n\n    // Locked balance is for potiential payoff\n    uint256 public lockedBalance;\n\n    // locked relation = locked balance / totalStakingBalance\n    uint256 public lockedRatio; //  1e18 = 1  1e17 = 0.1  1e19 = 10\n    uint256 public collateralFactor; //  1e18 = 1  1e17 = 0.1  1e19 = 10\n\n    // Available capacity for taking new\n    uint256 public availableCapacity;\n\n    // Premiums have been paid but the policies haven't expired\n    uint256 public activePremiums;\n\n    // [0]: LP, [1]: Lottery, [2]: Emergency\n    uint256[3] public rewardDistribution;\n}\n",
-  "sourcePath": "/Volumes/Store/src/Degis-Contracts-1/contracts/InsurancePoolStore.sol",
+  "sourcePath": "D:\\src\\Degis-Contracts-1\\contracts\\InsurancePoolStore.sol",
   "ast": {
     "absolutePath": "project:/contracts/InsurancePoolStore.sol",
     "exportedSymbols": {
       "InsurancePoolStore": [
-        11666
+        11687
       ]
     },
-    "id": 11667,
+    "id": 11688,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 11610,
+        "id": 11631,
         "literals": [
           "solidity",
           "0.8",
@@ -1193,9 +1193,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 11666,
+        "id": 11687,
         "linearizedBaseContracts": [
-          11666
+          11687
         ],
         "name": "InsurancePoolStore",
         "nameLocation": "65:18:42",
@@ -1204,12 +1204,12 @@
           {
             "constant": false,
             "functionSelector": "43d387f8",
-            "id": 11612,
+            "id": 11633,
             "mutability": "mutable",
             "name": "policyFlow",
             "nameLocation": "105:10:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "90:25:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1218,7 +1218,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 11611,
+              "id": 11632,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "90:7:42",
@@ -1233,12 +1233,12 @@
           {
             "constant": false,
             "functionSelector": "a59b3645",
-            "id": 11614,
+            "id": 11635,
             "mutability": "mutable",
             "name": "emergencyPool",
             "nameLocation": "136:13:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "121:28:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1247,7 +1247,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 11613,
+              "id": 11634,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "121:7:42",
@@ -1262,12 +1262,12 @@
           {
             "constant": false,
             "functionSelector": "b496991a",
-            "id": 11616,
+            "id": 11637,
             "mutability": "mutable",
             "name": "purchaseIncentiveAmount",
             "nameLocation": "171:23:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "156:38:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1276,7 +1276,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11615,
+              "id": 11636,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "156:7:42",
@@ -1289,12 +1289,12 @@
           },
           {
             "constant": false,
-            "id": 11619,
+            "id": 11640,
             "mutability": "mutable",
             "name": "frozenTime",
             "nameLocation": "209:10:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "201:27:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1303,7 +1303,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11617,
+              "id": 11638,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "201:7:42",
@@ -1314,7 +1314,7 @@
             },
             "value": {
               "hexValue": "37",
-              "id": 11618,
+              "id": 11639,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -1333,16 +1333,16 @@
           },
           {
             "canonicalName": "InsurancePoolStore.UserInfo",
-            "id": 11624,
+            "id": 11645,
             "members": [
               {
                 "constant": false,
-                "id": 11621,
+                "id": 11642,
                 "mutability": "mutable",
                 "name": "depositTime",
                 "nameLocation": "279:11:42",
                 "nodeType": "VariableDeclaration",
-                "scope": 11624,
+                "scope": 11645,
                 "src": "271:19:42",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1351,7 +1351,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 11620,
+                  "id": 11641,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "271:7:42",
@@ -1364,12 +1364,12 @@
               },
               {
                 "constant": false,
-                "id": 11623,
+                "id": 11644,
                 "mutability": "mutable",
                 "name": "pendingBalance",
                 "nameLocation": "308:14:42",
                 "nodeType": "VariableDeclaration",
-                "scope": 11624,
+                "scope": 11645,
                 "src": "300:22:42",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1378,7 +1378,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 11622,
+                  "id": 11643,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "300:7:42",
@@ -1393,29 +1393,29 @@
             "name": "UserInfo",
             "nameLocation": "252:8:42",
             "nodeType": "StructDefinition",
-            "scope": 11666,
+            "scope": 11687,
             "src": "245:119:42",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 11629,
+            "id": 11650,
             "mutability": "mutable",
             "name": "userInfo",
             "nameLocation": "398:8:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "369:37:42",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UserInfo_$11624_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UserInfo_$11645_storage_$",
               "typeString": "mapping(address => struct InsurancePoolStore.UserInfo)"
             },
             "typeName": {
-              "id": 11628,
+              "id": 11649,
               "keyType": {
-                "id": 11625,
+                "id": 11646,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "377:7:42",
@@ -1427,23 +1427,23 @@
               "nodeType": "Mapping",
               "src": "369:28:42",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UserInfo_$11624_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UserInfo_$11645_storage_$",
                 "typeString": "mapping(address => struct InsurancePoolStore.UserInfo)"
               },
               "valueType": {
-                "id": 11627,
+                "id": 11648,
                 "nodeType": "UserDefinedTypeName",
                 "pathNode": {
-                  "id": 11626,
+                  "id": 11647,
                   "name": "UserInfo",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 11624,
+                  "referencedDeclaration": 11645,
                   "src": "388:8:42"
                 },
-                "referencedDeclaration": 11624,
+                "referencedDeclaration": 11645,
                 "src": "388:8:42",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_UserInfo_$11624_storage_ptr",
+                  "typeIdentifier": "t_struct$_UserInfo_$11645_storage_ptr",
                   "typeString": "struct InsurancePoolStore.UserInfo"
                 }
               }
@@ -1452,16 +1452,16 @@
           },
           {
             "canonicalName": "InsurancePoolStore.UnstakeRequest",
-            "id": 11636,
+            "id": 11657,
             "members": [
               {
                 "constant": false,
-                "id": 11631,
+                "id": 11652,
                 "mutability": "mutable",
                 "name": "pendingAmount",
                 "nameLocation": "499:13:42",
                 "nodeType": "VariableDeclaration",
-                "scope": 11636,
+                "scope": 11657,
                 "src": "491:21:42",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1470,7 +1470,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 11630,
+                  "id": 11651,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "491:7:42",
@@ -1483,12 +1483,12 @@
               },
               {
                 "constant": false,
-                "id": 11633,
+                "id": 11654,
                 "mutability": "mutable",
                 "name": "fulfilledAmount",
                 "nameLocation": "530:15:42",
                 "nodeType": "VariableDeclaration",
-                "scope": 11636,
+                "scope": 11657,
                 "src": "522:23:42",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1497,7 +1497,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 11632,
+                  "id": 11653,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "522:7:42",
@@ -1510,12 +1510,12 @@
               },
               {
                 "constant": false,
-                "id": 11635,
+                "id": 11656,
                 "mutability": "mutable",
                 "name": "isPaidOut",
                 "nameLocation": "560:9:42",
                 "nodeType": "VariableDeclaration",
-                "scope": 11636,
+                "scope": 11657,
                 "src": "555:14:42",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -1524,7 +1524,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 11634,
+                  "id": 11655,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "555:4:42",
@@ -1539,29 +1539,29 @@
             "name": "UnstakeRequest",
             "nameLocation": "466:14:42",
             "nodeType": "StructDefinition",
-            "scope": 11666,
+            "scope": 11687,
             "src": "459:179:42",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 11642,
+            "id": 11663,
             "mutability": "mutable",
             "name": "unstakeRequests",
             "nameLocation": "723:15:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "677:61:42",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_UnstakeRequest_$11636_storage_$dyn_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_UnstakeRequest_$11657_storage_$dyn_storage_$",
               "typeString": "mapping(address => struct InsurancePoolStore.UnstakeRequest[])"
             },
             "typeName": {
-              "id": 11641,
+              "id": 11662,
               "keyType": {
-                "id": 11637,
+                "id": 11658,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "685:7:42",
@@ -1573,32 +1573,32 @@
               "nodeType": "Mapping",
               "src": "677:36:42",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_UnstakeRequest_$11636_storage_$dyn_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_UnstakeRequest_$11657_storage_$dyn_storage_$",
                 "typeString": "mapping(address => struct InsurancePoolStore.UnstakeRequest[])"
               },
               "valueType": {
                 "baseType": {
-                  "id": 11639,
+                  "id": 11660,
                   "nodeType": "UserDefinedTypeName",
                   "pathNode": {
-                    "id": 11638,
+                    "id": 11659,
                     "name": "UnstakeRequest",
                     "nodeType": "IdentifierPath",
-                    "referencedDeclaration": 11636,
+                    "referencedDeclaration": 11657,
                     "src": "696:14:42"
                   },
-                  "referencedDeclaration": 11636,
+                  "referencedDeclaration": 11657,
                   "src": "696:14:42",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_UnstakeRequest_$11636_storage_ptr",
+                    "typeIdentifier": "t_struct$_UnstakeRequest_$11657_storage_ptr",
                     "typeString": "struct InsurancePoolStore.UnstakeRequest"
                   }
                 },
-                "id": 11640,
+                "id": 11661,
                 "nodeType": "ArrayTypeName",
                 "src": "696:16:42",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_array$_t_struct$_UnstakeRequest_$11636_storage_$dyn_storage_ptr",
+                  "typeIdentifier": "t_array$_t_struct$_UnstakeRequest_$11657_storage_$dyn_storage_ptr",
                   "typeString": "struct InsurancePoolStore.UnstakeRequest[]"
                 }
               }
@@ -1607,12 +1607,12 @@
           },
           {
             "constant": false,
-            "id": 11645,
+            "id": 11666,
             "mutability": "mutable",
             "name": "unstakeQueue",
             "nameLocation": "797:12:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "778:31:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1622,7 +1622,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 11643,
+                "id": 11664,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "778:7:42",
@@ -1632,7 +1632,7 @@
                   "typeString": "address"
                 }
               },
-              "id": 11644,
+              "id": 11665,
               "nodeType": "ArrayTypeName",
               "src": "778:9:42",
               "typeDescriptions": {
@@ -1645,12 +1645,12 @@
           {
             "constant": false,
             "functionSelector": "cba9aa4f",
-            "id": 11647,
+            "id": 11668,
             "mutability": "mutable",
             "name": "LPValue",
             "nameLocation": "858:7:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "843:22:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1659,7 +1659,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11646,
+              "id": 11667,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "843:7:42",
@@ -1673,12 +1673,12 @@
           {
             "constant": false,
             "functionSelector": "e766c835",
-            "id": 11649,
+            "id": 11670,
             "mutability": "mutable",
             "name": "totalStakingBalance",
             "nameLocation": "928:19:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "913:34:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1687,7 +1687,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11648,
+              "id": 11669,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "913:7:42",
@@ -1701,12 +1701,12 @@
           {
             "constant": false,
             "functionSelector": "d8a9bdb7",
-            "id": 11651,
+            "id": 11672,
             "mutability": "mutable",
             "name": "realStakingBalance",
             "nameLocation": "1059:18:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "1044:33:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1715,7 +1715,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11650,
+              "id": 11671,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1044:7:42",
@@ -1729,12 +1729,12 @@
           {
             "constant": false,
             "functionSelector": "7b80889b",
-            "id": 11653,
+            "id": 11674,
             "mutability": "mutable",
             "name": "lockedBalance",
             "nameLocation": "1146:13:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "1131:28:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1743,7 +1743,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11652,
+              "id": 11673,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1131:7:42",
@@ -1757,12 +1757,12 @@
           {
             "constant": false,
             "functionSelector": "de2fbaba",
-            "id": 11655,
+            "id": 11676,
             "mutability": "mutable",
             "name": "lockedRatio",
             "nameLocation": "1243:11:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "1228:26:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1771,7 +1771,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11654,
+              "id": 11675,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1228:7:42",
@@ -1785,12 +1785,12 @@
           {
             "constant": false,
             "functionSelector": "df011c41",
-            "id": 11657,
+            "id": 11678,
             "mutability": "mutable",
             "name": "collateralFactor",
             "nameLocation": "1311:16:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "1296:31:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1799,7 +1799,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11656,
+              "id": 11677,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1296:7:42",
@@ -1813,12 +1813,12 @@
           {
             "constant": false,
             "functionSelector": "a21bc3fb",
-            "id": 11659,
+            "id": 11680,
             "mutability": "mutable",
             "name": "availableCapacity",
             "nameLocation": "1426:17:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "1411:32:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1827,7 +1827,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11658,
+              "id": 11679,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1411:7:42",
@@ -1841,12 +1841,12 @@
           {
             "constant": false,
             "functionSelector": "ea1a7679",
-            "id": 11661,
+            "id": 11682,
             "mutability": "mutable",
             "name": "activePremiums",
             "nameLocation": "1529:14:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "1514:29:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1855,7 +1855,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11660,
+              "id": 11681,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1514:7:42",
@@ -1869,12 +1869,12 @@
           {
             "constant": false,
             "functionSelector": "7d36f766",
-            "id": 11665,
+            "id": 11686,
             "mutability": "mutable",
             "name": "rewardDistribution",
             "nameLocation": "1613:18:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "1595:36:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1884,7 +1884,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 11662,
+                "id": 11683,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "1595:7:42",
@@ -1893,10 +1893,10 @@
                   "typeString": "uint256"
                 }
               },
-              "id": 11664,
+              "id": 11685,
               "length": {
                 "hexValue": "33",
-                "id": 11663,
+                "id": 11684,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
@@ -1920,7 +1920,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 11667,
+        "scope": 11688,
         "src": "56:1578:42",
         "usedErrors": []
       }
@@ -1931,15 +1931,15 @@
     "absolutePath": "project:/contracts/InsurancePoolStore.sol",
     "exportedSymbols": {
       "InsurancePoolStore": [
-        11666
+        11687
       ]
     },
-    "id": 11667,
+    "id": 11688,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 11610,
+        "id": 11631,
         "literals": [
           "solidity",
           "0.8",
@@ -1955,9 +1955,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 11666,
+        "id": 11687,
         "linearizedBaseContracts": [
-          11666
+          11687
         ],
         "name": "InsurancePoolStore",
         "nameLocation": "65:18:42",
@@ -1966,12 +1966,12 @@
           {
             "constant": false,
             "functionSelector": "43d387f8",
-            "id": 11612,
+            "id": 11633,
             "mutability": "mutable",
             "name": "policyFlow",
             "nameLocation": "105:10:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "90:25:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1980,7 +1980,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 11611,
+              "id": 11632,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "90:7:42",
@@ -1995,12 +1995,12 @@
           {
             "constant": false,
             "functionSelector": "a59b3645",
-            "id": 11614,
+            "id": 11635,
             "mutability": "mutable",
             "name": "emergencyPool",
             "nameLocation": "136:13:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "121:28:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2009,7 +2009,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 11613,
+              "id": 11634,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "121:7:42",
@@ -2024,12 +2024,12 @@
           {
             "constant": false,
             "functionSelector": "b496991a",
-            "id": 11616,
+            "id": 11637,
             "mutability": "mutable",
             "name": "purchaseIncentiveAmount",
             "nameLocation": "171:23:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "156:38:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2038,7 +2038,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11615,
+              "id": 11636,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "156:7:42",
@@ -2051,12 +2051,12 @@
           },
           {
             "constant": false,
-            "id": 11619,
+            "id": 11640,
             "mutability": "mutable",
             "name": "frozenTime",
             "nameLocation": "209:10:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "201:27:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2065,7 +2065,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11617,
+              "id": 11638,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "201:7:42",
@@ -2076,7 +2076,7 @@
             },
             "value": {
               "hexValue": "37",
-              "id": 11618,
+              "id": 11639,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -2095,16 +2095,16 @@
           },
           {
             "canonicalName": "InsurancePoolStore.UserInfo",
-            "id": 11624,
+            "id": 11645,
             "members": [
               {
                 "constant": false,
-                "id": 11621,
+                "id": 11642,
                 "mutability": "mutable",
                 "name": "depositTime",
                 "nameLocation": "279:11:42",
                 "nodeType": "VariableDeclaration",
-                "scope": 11624,
+                "scope": 11645,
                 "src": "271:19:42",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2113,7 +2113,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 11620,
+                  "id": 11641,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "271:7:42",
@@ -2126,12 +2126,12 @@
               },
               {
                 "constant": false,
-                "id": 11623,
+                "id": 11644,
                 "mutability": "mutable",
                 "name": "pendingBalance",
                 "nameLocation": "308:14:42",
                 "nodeType": "VariableDeclaration",
-                "scope": 11624,
+                "scope": 11645,
                 "src": "300:22:42",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2140,7 +2140,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 11622,
+                  "id": 11643,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "300:7:42",
@@ -2155,29 +2155,29 @@
             "name": "UserInfo",
             "nameLocation": "252:8:42",
             "nodeType": "StructDefinition",
-            "scope": 11666,
+            "scope": 11687,
             "src": "245:119:42",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 11629,
+            "id": 11650,
             "mutability": "mutable",
             "name": "userInfo",
             "nameLocation": "398:8:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "369:37:42",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UserInfo_$11624_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UserInfo_$11645_storage_$",
               "typeString": "mapping(address => struct InsurancePoolStore.UserInfo)"
             },
             "typeName": {
-              "id": 11628,
+              "id": 11649,
               "keyType": {
-                "id": 11625,
+                "id": 11646,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "377:7:42",
@@ -2189,23 +2189,23 @@
               "nodeType": "Mapping",
               "src": "369:28:42",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UserInfo_$11624_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_UserInfo_$11645_storage_$",
                 "typeString": "mapping(address => struct InsurancePoolStore.UserInfo)"
               },
               "valueType": {
-                "id": 11627,
+                "id": 11648,
                 "nodeType": "UserDefinedTypeName",
                 "pathNode": {
-                  "id": 11626,
+                  "id": 11647,
                   "name": "UserInfo",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 11624,
+                  "referencedDeclaration": 11645,
                   "src": "388:8:42"
                 },
-                "referencedDeclaration": 11624,
+                "referencedDeclaration": 11645,
                 "src": "388:8:42",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_UserInfo_$11624_storage_ptr",
+                  "typeIdentifier": "t_struct$_UserInfo_$11645_storage_ptr",
                   "typeString": "struct InsurancePoolStore.UserInfo"
                 }
               }
@@ -2214,16 +2214,16 @@
           },
           {
             "canonicalName": "InsurancePoolStore.UnstakeRequest",
-            "id": 11636,
+            "id": 11657,
             "members": [
               {
                 "constant": false,
-                "id": 11631,
+                "id": 11652,
                 "mutability": "mutable",
                 "name": "pendingAmount",
                 "nameLocation": "499:13:42",
                 "nodeType": "VariableDeclaration",
-                "scope": 11636,
+                "scope": 11657,
                 "src": "491:21:42",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2232,7 +2232,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 11630,
+                  "id": 11651,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "491:7:42",
@@ -2245,12 +2245,12 @@
               },
               {
                 "constant": false,
-                "id": 11633,
+                "id": 11654,
                 "mutability": "mutable",
                 "name": "fulfilledAmount",
                 "nameLocation": "530:15:42",
                 "nodeType": "VariableDeclaration",
-                "scope": 11636,
+                "scope": 11657,
                 "src": "522:23:42",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2259,7 +2259,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 11632,
+                  "id": 11653,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "522:7:42",
@@ -2272,12 +2272,12 @@
               },
               {
                 "constant": false,
-                "id": 11635,
+                "id": 11656,
                 "mutability": "mutable",
                 "name": "isPaidOut",
                 "nameLocation": "560:9:42",
                 "nodeType": "VariableDeclaration",
-                "scope": 11636,
+                "scope": 11657,
                 "src": "555:14:42",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2286,7 +2286,7 @@
                   "typeString": "bool"
                 },
                 "typeName": {
-                  "id": 11634,
+                  "id": 11655,
                   "name": "bool",
                   "nodeType": "ElementaryTypeName",
                   "src": "555:4:42",
@@ -2301,29 +2301,29 @@
             "name": "UnstakeRequest",
             "nameLocation": "466:14:42",
             "nodeType": "StructDefinition",
-            "scope": 11666,
+            "scope": 11687,
             "src": "459:179:42",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 11642,
+            "id": 11663,
             "mutability": "mutable",
             "name": "unstakeRequests",
             "nameLocation": "723:15:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "677:61:42",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_UnstakeRequest_$11636_storage_$dyn_storage_$",
+              "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_UnstakeRequest_$11657_storage_$dyn_storage_$",
               "typeString": "mapping(address => struct InsurancePoolStore.UnstakeRequest[])"
             },
             "typeName": {
-              "id": 11641,
+              "id": 11662,
               "keyType": {
-                "id": 11637,
+                "id": 11658,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "685:7:42",
@@ -2335,32 +2335,32 @@
               "nodeType": "Mapping",
               "src": "677:36:42",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_UnstakeRequest_$11636_storage_$dyn_storage_$",
+                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_struct$_UnstakeRequest_$11657_storage_$dyn_storage_$",
                 "typeString": "mapping(address => struct InsurancePoolStore.UnstakeRequest[])"
               },
               "valueType": {
                 "baseType": {
-                  "id": 11639,
+                  "id": 11660,
                   "nodeType": "UserDefinedTypeName",
                   "pathNode": {
-                    "id": 11638,
+                    "id": 11659,
                     "name": "UnstakeRequest",
                     "nodeType": "IdentifierPath",
-                    "referencedDeclaration": 11636,
+                    "referencedDeclaration": 11657,
                     "src": "696:14:42"
                   },
-                  "referencedDeclaration": 11636,
+                  "referencedDeclaration": 11657,
                   "src": "696:14:42",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_UnstakeRequest_$11636_storage_ptr",
+                    "typeIdentifier": "t_struct$_UnstakeRequest_$11657_storage_ptr",
                     "typeString": "struct InsurancePoolStore.UnstakeRequest"
                   }
                 },
-                "id": 11640,
+                "id": 11661,
                 "nodeType": "ArrayTypeName",
                 "src": "696:16:42",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_array$_t_struct$_UnstakeRequest_$11636_storage_$dyn_storage_ptr",
+                  "typeIdentifier": "t_array$_t_struct$_UnstakeRequest_$11657_storage_$dyn_storage_ptr",
                   "typeString": "struct InsurancePoolStore.UnstakeRequest[]"
                 }
               }
@@ -2369,12 +2369,12 @@
           },
           {
             "constant": false,
-            "id": 11645,
+            "id": 11666,
             "mutability": "mutable",
             "name": "unstakeQueue",
             "nameLocation": "797:12:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "778:31:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2384,7 +2384,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 11643,
+                "id": 11664,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "778:7:42",
@@ -2394,7 +2394,7 @@
                   "typeString": "address"
                 }
               },
-              "id": 11644,
+              "id": 11665,
               "nodeType": "ArrayTypeName",
               "src": "778:9:42",
               "typeDescriptions": {
@@ -2407,12 +2407,12 @@
           {
             "constant": false,
             "functionSelector": "cba9aa4f",
-            "id": 11647,
+            "id": 11668,
             "mutability": "mutable",
             "name": "LPValue",
             "nameLocation": "858:7:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "843:22:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2421,7 +2421,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11646,
+              "id": 11667,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "843:7:42",
@@ -2435,12 +2435,12 @@
           {
             "constant": false,
             "functionSelector": "e766c835",
-            "id": 11649,
+            "id": 11670,
             "mutability": "mutable",
             "name": "totalStakingBalance",
             "nameLocation": "928:19:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "913:34:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2449,7 +2449,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11648,
+              "id": 11669,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "913:7:42",
@@ -2463,12 +2463,12 @@
           {
             "constant": false,
             "functionSelector": "d8a9bdb7",
-            "id": 11651,
+            "id": 11672,
             "mutability": "mutable",
             "name": "realStakingBalance",
             "nameLocation": "1059:18:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "1044:33:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2477,7 +2477,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11650,
+              "id": 11671,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1044:7:42",
@@ -2491,12 +2491,12 @@
           {
             "constant": false,
             "functionSelector": "7b80889b",
-            "id": 11653,
+            "id": 11674,
             "mutability": "mutable",
             "name": "lockedBalance",
             "nameLocation": "1146:13:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "1131:28:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2505,7 +2505,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11652,
+              "id": 11673,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1131:7:42",
@@ -2519,12 +2519,12 @@
           {
             "constant": false,
             "functionSelector": "de2fbaba",
-            "id": 11655,
+            "id": 11676,
             "mutability": "mutable",
             "name": "lockedRatio",
             "nameLocation": "1243:11:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "1228:26:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2533,7 +2533,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11654,
+              "id": 11675,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1228:7:42",
@@ -2547,12 +2547,12 @@
           {
             "constant": false,
             "functionSelector": "df011c41",
-            "id": 11657,
+            "id": 11678,
             "mutability": "mutable",
             "name": "collateralFactor",
             "nameLocation": "1311:16:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "1296:31:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2561,7 +2561,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11656,
+              "id": 11677,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1296:7:42",
@@ -2575,12 +2575,12 @@
           {
             "constant": false,
             "functionSelector": "a21bc3fb",
-            "id": 11659,
+            "id": 11680,
             "mutability": "mutable",
             "name": "availableCapacity",
             "nameLocation": "1426:17:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "1411:32:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2589,7 +2589,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11658,
+              "id": 11679,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1411:7:42",
@@ -2603,12 +2603,12 @@
           {
             "constant": false,
             "functionSelector": "ea1a7679",
-            "id": 11661,
+            "id": 11682,
             "mutability": "mutable",
             "name": "activePremiums",
             "nameLocation": "1529:14:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "1514:29:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2617,7 +2617,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 11660,
+              "id": 11681,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1514:7:42",
@@ -2631,12 +2631,12 @@
           {
             "constant": false,
             "functionSelector": "7d36f766",
-            "id": 11665,
+            "id": 11686,
             "mutability": "mutable",
             "name": "rewardDistribution",
             "nameLocation": "1613:18:42",
             "nodeType": "VariableDeclaration",
-            "scope": 11666,
+            "scope": 11687,
             "src": "1595:36:42",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2646,7 +2646,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 11662,
+                "id": 11683,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "1595:7:42",
@@ -2655,10 +2655,10 @@
                   "typeString": "uint256"
                 }
               },
-              "id": 11664,
+              "id": 11685,
               "length": {
                 "hexValue": "33",
-                "id": 11663,
+                "id": 11684,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
@@ -2682,7 +2682,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 11667,
+        "scope": 11688,
         "src": "56:1578:42",
         "usedErrors": []
       }
@@ -2695,7 +2695,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-12-02T14:18:28.820Z",
+  "updatedAt": "2021-12-02T17:43:33.870Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

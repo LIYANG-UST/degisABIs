@@ -105,7 +105,7 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ninterface OracleInterface {\n  function fulfillOracleRequest(\n    bytes32 requestId,\n    uint256 payment,\n    address callbackAddress,\n    bytes4 callbackFunctionId,\n    uint256 expiration,\n    bytes32 data\n  )\n    external\n    returns (\n      bool\n    );\n\n  function isAuthorizedSender(\n    address node\n  )\n    external\n    view\n    returns (\n      bool\n    );\n\n  function withdraw(\n    address recipient,\n    uint256 amount\n  ) external;\n\n  function withdrawable()\n    external\n    view\n    returns (\n      uint256\n    );\n}\n",
-  "sourcePath": "@chainlink/contracts/src/v0.8/interfaces/OracleInterface.sol",
+  "sourcePath": "@chainlink\\contracts\\src\\v0.8\\interfaces\\OracleInterface.sol",
   "ast": {
     "absolutePath": "@chainlink/contracts/src/v0.8/interfaces/OracleInterface.sol",
     "exportedSymbols": {
@@ -1084,7 +1084,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-12-02T14:18:28.476Z",
+  "updatedAt": "2021-12-02T17:43:33.521Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

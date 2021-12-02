@@ -28,7 +28,7 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.5+commit.a4f2e591\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"productId\",\"type\":\"uint256\"}],\"name\":\"NewProduct\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"newProduct\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IProduct.sol\":\"IProduct\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IProduct.sol\":{\"keccak256\":\"0xbbf1bf6cfb3f14dd3afaba80378bd9fd31f5f516d6baa5ccd6ba47ba587d05d8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://661c5a834a8a3a8cacc5c9f02ce12f48e4bb19c8951957fe205c211f6b8930c9\",\"dweb:/ipfs/QmebBfCE1fZnw46T1DzYPAEVF4akTDYANQEY6GZtB73c9d\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.5+commit.a4f2e591\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"productId\",\"type\":\"uint256\"}],\"name\":\"NewProduct\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"newProduct\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IProduct.sol\":\"IProduct\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IProduct.sol\":{\"keccak256\":\"0xcb7b915cde4422e5a002d4287ae2f3018a6770c46fbadb13e5312894f47fb64a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://094d331313a6e741e5e6ae1299ea5e437a581c7cd1c53148e1d626a8a1751740\",\"dweb:/ipfs/Qmey5syw4ASQpvY1e2MwU3C1KjmfDbVGras2bbu4mWkHPr\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -36,21 +36,21 @@
   "deployedGeneratedSources": [],
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ninterface IProduct {\n    event NewProduct(uint256 productId);\n\n    function newProduct() external returns (uint256);\n}\n",
-  "sourcePath": "/Volumes/Store/src/Degis-Contracts-1/contracts/interfaces/IProduct.sol",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ninterface IProduct {\r\n    event NewProduct(uint256 productId);\r\n\r\n    function newProduct() external returns (uint256);\r\n}\r\n",
+  "sourcePath": "D:\\src\\Degis-Contracts-1\\contracts\\interfaces\\IProduct.sol",
   "ast": {
     "absolutePath": "project:/contracts/interfaces/IProduct.sol",
     "exportedSymbols": {
       "IProduct": [
-        14355
+        12067
       ]
     },
-    "id": 14356,
+    "id": 12068,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 14345,
+        "id": 12057,
         "literals": [
           "solidity",
           "^",
@@ -58,7 +58,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "32:23:55"
+        "src": "33:23:46"
       },
       {
         "abstract": false,
@@ -66,34 +66,34 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 14355,
+        "id": 12067,
         "linearizedBaseContracts": [
-          14355
+          12067
         ],
         "name": "IProduct",
-        "nameLocation": "67:8:55",
+        "nameLocation": "70:8:46",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "anonymous": false,
-            "id": 14349,
+            "id": 12061,
             "name": "NewProduct",
-            "nameLocation": "88:10:55",
+            "nameLocation": "92:10:46",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 14348,
+              "id": 12060,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 14347,
+                  "id": 12059,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "productId",
-                  "nameLocation": "107:9:55",
+                  "nameLocation": "111:9:46",
                   "nodeType": "VariableDeclaration",
-                  "scope": 14349,
-                  "src": "99:17:55",
+                  "scope": 12061,
+                  "src": "103:17:46",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -101,10 +101,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 14346,
+                    "id": 12058,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "99:7:55",
+                    "src": "103:7:46",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -113,38 +113,38 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "98:19:55"
+              "src": "102:19:46"
             },
-            "src": "82:36:55"
+            "src": "86:36:46"
           },
           {
             "functionSelector": "479c2b27",
-            "id": 14354,
+            "id": 12066,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "newProduct",
-            "nameLocation": "133:10:55",
+            "nameLocation": "139:10:46",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 14350,
+              "id": 12062,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "143:2:55"
+              "src": "149:2:46"
             },
             "returnParameters": {
-              "id": 14353,
+              "id": 12065,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 14352,
+                  "id": 12064,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 14354,
-                  "src": "164:7:55",
+                  "scope": 12066,
+                  "src": "170:7:46",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -152,10 +152,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 14351,
+                    "id": 12063,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "164:7:55",
+                    "src": "170:7:46",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -164,35 +164,35 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "163:9:55"
+              "src": "169:9:46"
             },
-            "scope": 14355,
-            "src": "124:49:55",
+            "scope": 12067,
+            "src": "130:49:46",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 14356,
-        "src": "57:118:55",
+        "scope": 12068,
+        "src": "60:122:46",
         "usedErrors": []
       }
     ],
-    "src": "32:144:55"
+    "src": "33:151:46"
   },
   "legacyAST": {
     "absolutePath": "project:/contracts/interfaces/IProduct.sol",
     "exportedSymbols": {
       "IProduct": [
-        14355
+        12067
       ]
     },
-    "id": 14356,
+    "id": 12068,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 14345,
+        "id": 12057,
         "literals": [
           "solidity",
           "^",
@@ -200,7 +200,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "32:23:55"
+        "src": "33:23:46"
       },
       {
         "abstract": false,
@@ -208,34 +208,34 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 14355,
+        "id": 12067,
         "linearizedBaseContracts": [
-          14355
+          12067
         ],
         "name": "IProduct",
-        "nameLocation": "67:8:55",
+        "nameLocation": "70:8:46",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "anonymous": false,
-            "id": 14349,
+            "id": 12061,
             "name": "NewProduct",
-            "nameLocation": "88:10:55",
+            "nameLocation": "92:10:46",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 14348,
+              "id": 12060,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 14347,
+                  "id": 12059,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "productId",
-                  "nameLocation": "107:9:55",
+                  "nameLocation": "111:9:46",
                   "nodeType": "VariableDeclaration",
-                  "scope": 14349,
-                  "src": "99:17:55",
+                  "scope": 12061,
+                  "src": "103:17:46",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -243,10 +243,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 14346,
+                    "id": 12058,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "99:7:55",
+                    "src": "103:7:46",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -255,38 +255,38 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "98:19:55"
+              "src": "102:19:46"
             },
-            "src": "82:36:55"
+            "src": "86:36:46"
           },
           {
             "functionSelector": "479c2b27",
-            "id": 14354,
+            "id": 12066,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "newProduct",
-            "nameLocation": "133:10:55",
+            "nameLocation": "139:10:46",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 14350,
+              "id": 12062,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "143:2:55"
+              "src": "149:2:46"
             },
             "returnParameters": {
-              "id": 14353,
+              "id": 12065,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 14352,
+                  "id": 12064,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 14354,
-                  "src": "164:7:55",
+                  "scope": 12066,
+                  "src": "170:7:46",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -294,10 +294,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 14351,
+                    "id": 12063,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "164:7:55",
+                    "src": "170:7:46",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -306,21 +306,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "163:9:55"
+              "src": "169:9:46"
             },
-            "scope": 14355,
-            "src": "124:49:55",
+            "scope": 12067,
+            "src": "130:49:46",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 14356,
-        "src": "57:118:55",
+        "scope": 12068,
+        "src": "60:122:46",
         "usedErrors": []
       }
     ],
-    "src": "32:144:55"
+    "src": "33:151:46"
   },
   "compiler": {
     "name": "solc",
@@ -328,7 +328,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-11-02T06:40:33.755Z",
+  "updatedAt": "2021-10-13T08:08:14.086Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
