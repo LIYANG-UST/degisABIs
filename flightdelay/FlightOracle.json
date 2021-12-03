@@ -17251,12 +17251,12 @@
     "4": {
       "events": {},
       "links": {},
-      "address": "0x14FB597C99b2150cc24a9d7E4134407668d55352",
-      "transactionHash": "0x24484ede68aacaa1727b2c9edc68922d5edc0bd175894c54c149a71ce93cd050"
+      "address": "0xDd11df4DAe4E9564151dc9d638f1FF549E0868E6",
+      "transactionHash": "0x5acef10cf76a4948e85dc91c6c331a5545fe9c8fd4cfbc406e7c0664388f9cd7"
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-12-02T14:44:43.428Z",
+  "updatedAt": "2021-12-03T13:07:36.215Z",
   "networkType": "ethereum",
   "devdoc": {
     "details": "Remember to set the url, oracleAddress and jobId",
