@@ -1,0 +1,725 @@
+{
+  "contractName": "Queue",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "length",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.5+commit.a4f2e591\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"length\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/libraries/Queue.sol\":\"Queue\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/libraries/Queue.sol\":{\"keccak256\":\"0x8576cf41b72d56fea68f3b092be6c0396a9faaf5c7b902e88a5a883409482851\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://246766c5a567ce51945d76f8bb4d18897258455c4d676604c5257ad86897f5a2\",\"dweb:/ipfs/QmSiUXU49dtH26YgU9JC2CNnjmgdrhqw65uDFv399HsHds\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50606d80601d6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80631f7b6d3214602d575b600080fd5b60336035565b005b56fea26469706673582212205821b9049f4f299e93c83a917609acdac1a4a3770b6678c977f1ee248bd79b5464736f6c63430008050033",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80631f7b6d3214602d575b600080fd5b60336035565b005b56fea26469706673582212205821b9049f4f299e93c83a917609acdac1a4a3770b6678c977f1ee248bd79b5464736f6c63430008050033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "60:411:55:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "60:411:55:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;325:27;;;:::i;:::-;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\ncontract Queue {\r\n    struct UnstakeRequest {\r\n        uint256 pendingAmount;\r\n        uint256 fulfilledAmount;\r\n        bool isPaidOut;\r\n    }\r\n\r\n    struct UnstakeQueue {\r\n        UnstakeRequest[] req;\r\n        uint256 front;\r\n        uint256 rear;\r\n    }\r\n\r\n    function length() public {}\r\n\r\n    // @function push:\r\n    function push() internal {}\r\n\r\n    // @function pop:\r\n    function pop() internal {}\r\n}\r\n",
+  "sourcePath": "D:\\src\\Degis-Contracts-1\\contracts\\libraries\\Queue.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/libraries/Queue.sol",
+    "exportedSymbols": {
+      "Queue": [
+        13713
+      ]
+    },
+    "id": 13714,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 13684,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:55"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 13713,
+        "linearizedBaseContracts": [
+          13713
+        ],
+        "name": "Queue",
+        "nameLocation": "69:5:55",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Queue.UnstakeRequest",
+            "id": 13691,
+            "members": [
+              {
+                "constant": false,
+                "id": 13686,
+                "mutability": "mutable",
+                "name": "pendingAmount",
+                "nameLocation": "123:13:55",
+                "nodeType": "VariableDeclaration",
+                "scope": 13691,
+                "src": "115:21:55",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13685,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "115:7:55",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13688,
+                "mutability": "mutable",
+                "name": "fulfilledAmount",
+                "nameLocation": "155:15:55",
+                "nodeType": "VariableDeclaration",
+                "scope": 13691,
+                "src": "147:23:55",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13687,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "147:7:55",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13690,
+                "mutability": "mutable",
+                "name": "isPaidOut",
+                "nameLocation": "186:9:55",
+                "nodeType": "VariableDeclaration",
+                "scope": 13691,
+                "src": "181:14:55",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 13689,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "181:4:55",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "UnstakeRequest",
+            "nameLocation": "89:14:55",
+            "nodeType": "StructDefinition",
+            "scope": 13713,
+            "src": "82:121:55",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Queue.UnstakeQueue",
+            "id": 13700,
+            "members": [
+              {
+                "constant": false,
+                "id": 13695,
+                "mutability": "mutable",
+                "name": "req",
+                "nameLocation": "259:3:55",
+                "nodeType": "VariableDeclaration",
+                "scope": 13700,
+                "src": "242:20:55",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_UnstakeRequest_$13691_storage_$dyn_storage_ptr",
+                  "typeString": "struct Queue.UnstakeRequest[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 13693,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 13692,
+                      "name": "UnstakeRequest",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 13691,
+                      "src": "242:14:55"
+                    },
+                    "referencedDeclaration": 13691,
+                    "src": "242:14:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_UnstakeRequest_$13691_storage_ptr",
+                      "typeString": "struct Queue.UnstakeRequest"
+                    }
+                  },
+                  "id": 13694,
+                  "nodeType": "ArrayTypeName",
+                  "src": "242:16:55",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_UnstakeRequest_$13691_storage_$dyn_storage_ptr",
+                    "typeString": "struct Queue.UnstakeRequest[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13697,
+                "mutability": "mutable",
+                "name": "front",
+                "nameLocation": "281:5:55",
+                "nodeType": "VariableDeclaration",
+                "scope": 13700,
+                "src": "273:13:55",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13696,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "273:7:55",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13699,
+                "mutability": "mutable",
+                "name": "rear",
+                "nameLocation": "305:4:55",
+                "nodeType": "VariableDeclaration",
+                "scope": 13700,
+                "src": "297:12:55",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13698,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "297:7:55",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "UnstakeQueue",
+            "nameLocation": "218:12:55",
+            "nodeType": "StructDefinition",
+            "scope": 13713,
+            "src": "211:106:55",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 13703,
+              "nodeType": "Block",
+              "src": "350:2:55",
+              "statements": []
+            },
+            "functionSelector": "1f7b6d32",
+            "id": 13704,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "length",
+            "nameLocation": "334:6:55",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13701,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "340:2:55"
+            },
+            "returnParameters": {
+              "id": 13702,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "350:0:55"
+            },
+            "scope": 13713,
+            "src": "325:27:55",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 13707,
+              "nodeType": "Block",
+              "src": "409:2:55",
+              "statements": []
+            },
+            "id": 13708,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "push",
+            "nameLocation": "393:4:55",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13705,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "397:2:55"
+            },
+            "returnParameters": {
+              "id": 13706,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "409:0:55"
+            },
+            "scope": 13713,
+            "src": "384:27:55",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 13711,
+              "nodeType": "Block",
+              "src": "466:2:55",
+              "statements": []
+            },
+            "id": 13712,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pop",
+            "nameLocation": "451:3:55",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13709,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "454:2:55"
+            },
+            "returnParameters": {
+              "id": 13710,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "466:0:55"
+            },
+            "scope": 13713,
+            "src": "442:26:55",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 13714,
+        "src": "60:411:55",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:440:55"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/libraries/Queue.sol",
+    "exportedSymbols": {
+      "Queue": [
+        13713
+      ]
+    },
+    "id": 13714,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 13684,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:55"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 13713,
+        "linearizedBaseContracts": [
+          13713
+        ],
+        "name": "Queue",
+        "nameLocation": "69:5:55",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Queue.UnstakeRequest",
+            "id": 13691,
+            "members": [
+              {
+                "constant": false,
+                "id": 13686,
+                "mutability": "mutable",
+                "name": "pendingAmount",
+                "nameLocation": "123:13:55",
+                "nodeType": "VariableDeclaration",
+                "scope": 13691,
+                "src": "115:21:55",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13685,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "115:7:55",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13688,
+                "mutability": "mutable",
+                "name": "fulfilledAmount",
+                "nameLocation": "155:15:55",
+                "nodeType": "VariableDeclaration",
+                "scope": 13691,
+                "src": "147:23:55",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13687,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "147:7:55",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13690,
+                "mutability": "mutable",
+                "name": "isPaidOut",
+                "nameLocation": "186:9:55",
+                "nodeType": "VariableDeclaration",
+                "scope": 13691,
+                "src": "181:14:55",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 13689,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "181:4:55",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "UnstakeRequest",
+            "nameLocation": "89:14:55",
+            "nodeType": "StructDefinition",
+            "scope": 13713,
+            "src": "82:121:55",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Queue.UnstakeQueue",
+            "id": 13700,
+            "members": [
+              {
+                "constant": false,
+                "id": 13695,
+                "mutability": "mutable",
+                "name": "req",
+                "nameLocation": "259:3:55",
+                "nodeType": "VariableDeclaration",
+                "scope": 13700,
+                "src": "242:20:55",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_UnstakeRequest_$13691_storage_$dyn_storage_ptr",
+                  "typeString": "struct Queue.UnstakeRequest[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 13693,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 13692,
+                      "name": "UnstakeRequest",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 13691,
+                      "src": "242:14:55"
+                    },
+                    "referencedDeclaration": 13691,
+                    "src": "242:14:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_UnstakeRequest_$13691_storage_ptr",
+                      "typeString": "struct Queue.UnstakeRequest"
+                    }
+                  },
+                  "id": 13694,
+                  "nodeType": "ArrayTypeName",
+                  "src": "242:16:55",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_UnstakeRequest_$13691_storage_$dyn_storage_ptr",
+                    "typeString": "struct Queue.UnstakeRequest[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13697,
+                "mutability": "mutable",
+                "name": "front",
+                "nameLocation": "281:5:55",
+                "nodeType": "VariableDeclaration",
+                "scope": 13700,
+                "src": "273:13:55",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13696,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "273:7:55",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13699,
+                "mutability": "mutable",
+                "name": "rear",
+                "nameLocation": "305:4:55",
+                "nodeType": "VariableDeclaration",
+                "scope": 13700,
+                "src": "297:12:55",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13698,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "297:7:55",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "UnstakeQueue",
+            "nameLocation": "218:12:55",
+            "nodeType": "StructDefinition",
+            "scope": 13713,
+            "src": "211:106:55",
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 13703,
+              "nodeType": "Block",
+              "src": "350:2:55",
+              "statements": []
+            },
+            "functionSelector": "1f7b6d32",
+            "id": 13704,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "length",
+            "nameLocation": "334:6:55",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13701,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "340:2:55"
+            },
+            "returnParameters": {
+              "id": 13702,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "350:0:55"
+            },
+            "scope": 13713,
+            "src": "325:27:55",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 13707,
+              "nodeType": "Block",
+              "src": "409:2:55",
+              "statements": []
+            },
+            "id": 13708,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "push",
+            "nameLocation": "393:4:55",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13705,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "397:2:55"
+            },
+            "returnParameters": {
+              "id": 13706,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "409:0:55"
+            },
+            "scope": 13713,
+            "src": "384:27:55",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 13711,
+              "nodeType": "Block",
+              "src": "466:2:55",
+              "statements": []
+            },
+            "id": 13712,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pop",
+            "nameLocation": "451:3:55",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 13709,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "454:2:55"
+            },
+            "returnParameters": {
+              "id": 13710,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "466:0:55"
+            },
+            "scope": 13713,
+            "src": "442:26:55",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 13714,
+        "src": "60:411:55",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:440:55"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.5+commit.a4f2e591.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-10-07T16:18:49.290Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
