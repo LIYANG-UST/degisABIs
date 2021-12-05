@@ -6978,7 +6978,7 @@
         545
       ],
       "IDegisToken": [
-        3817
+        3857
       ],
       "IERC20": [
         623
@@ -7050,7 +7050,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 2511,
-        "sourceUnit": 3818,
+        "sourceUnit": 3858,
         "src": "235:38:13",
         "symbolAliases": [],
         "unitAlias": ""
@@ -7139,13 +7139,13 @@
                 "id": 2401,
                 "name": "IDegisToken",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 3817,
+                "referencedDeclaration": 3857,
                 "src": "358:11:13"
               },
-              "referencedDeclaration": 3817,
+              "referencedDeclaration": 3857,
               "src": "358:11:13",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IDegisToken_$3817",
+                "typeIdentifier": "t_contract$_IDegisToken_$3857",
                 "typeString": "contract IDegisToken"
               }
             }
@@ -7191,7 +7191,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_IDegisToken_$3817",
+              "typeIdentifier": "t_contract$_IDegisToken_$3857",
               "typeString": "contract IDegisToken"
             },
             "typeName": {
@@ -7201,13 +7201,13 @@
                 "id": 2406,
                 "name": "IDegisToken",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 3817,
+                "referencedDeclaration": 3857,
                 "src": "403:11:13"
               },
-              "referencedDeclaration": 3817,
+              "referencedDeclaration": 3857,
               "src": "403:11:13",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IDegisToken_$3817",
+                "typeIdentifier": "t_contract$_IDegisToken_$3857",
                 "typeString": "contract IDegisToken"
               }
             },
@@ -7336,7 +7336,7 @@
                       "referencedDeclaration": 2408,
                       "src": "578:5:13",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IDegisToken_$3817",
+                        "typeIdentifier": "t_contract$_IDegisToken_$3857",
                         "typeString": "contract IDegisToken"
                       }
                     },
@@ -7368,10 +7368,10 @@
                         "name": "IDegisToken",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3817,
+                        "referencedDeclaration": 3857,
                         "src": "586:11:13",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_IDegisToken_$3817_$",
+                          "typeIdentifier": "t_type$_t_contract$_IDegisToken_$3857_$",
                           "typeString": "type(contract IDegisToken)"
                         }
                       },
@@ -7386,13 +7386,13 @@
                       "src": "586:19:13",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IDegisToken_$3817",
+                        "typeIdentifier": "t_contract$_IDegisToken_$3857",
                         "typeString": "contract IDegisToken"
                       }
                     },
                     "src": "578:27:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IDegisToken_$3817",
+                      "typeIdentifier": "t_contract$_IDegisToken_$3857",
                       "typeString": "contract IDegisToken"
                     }
                   },
@@ -7581,7 +7581,7 @@
                               "referencedDeclaration": 2408,
                               "src": "819:5:13",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_IDegisToken_$3817",
+                                "typeIdentifier": "t_contract$_IDegisToken_$3857",
                                 "typeString": "contract IDegisToken"
                               }
                             },
@@ -7816,7 +7816,7 @@
                         "referencedDeclaration": 2408,
                         "src": "928:5:13",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IDegisToken_$3817",
+                          "typeIdentifier": "t_contract$_IDegisToken_$3857",
                           "typeString": "contract IDegisToken"
                         }
                       },
@@ -8444,7 +8444,7 @@
         545
       ],
       "IDegisToken": [
-        3817
+        3857
       ],
       "IERC20": [
         623
@@ -8516,7 +8516,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 2511,
-        "sourceUnit": 3818,
+        "sourceUnit": 3858,
         "src": "235:38:13",
         "symbolAliases": [],
         "unitAlias": ""
@@ -8605,13 +8605,13 @@
                 "id": 2401,
                 "name": "IDegisToken",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 3817,
+                "referencedDeclaration": 3857,
                 "src": "358:11:13"
               },
-              "referencedDeclaration": 3817,
+              "referencedDeclaration": 3857,
               "src": "358:11:13",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IDegisToken_$3817",
+                "typeIdentifier": "t_contract$_IDegisToken_$3857",
                 "typeString": "contract IDegisToken"
               }
             }
@@ -8657,7 +8657,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_IDegisToken_$3817",
+              "typeIdentifier": "t_contract$_IDegisToken_$3857",
               "typeString": "contract IDegisToken"
             },
             "typeName": {
@@ -8667,13 +8667,13 @@
                 "id": 2406,
                 "name": "IDegisToken",
                 "nodeType": "IdentifierPath",
-                "referencedDeclaration": 3817,
+                "referencedDeclaration": 3857,
                 "src": "403:11:13"
               },
-              "referencedDeclaration": 3817,
+              "referencedDeclaration": 3857,
               "src": "403:11:13",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_IDegisToken_$3817",
+                "typeIdentifier": "t_contract$_IDegisToken_$3857",
                 "typeString": "contract IDegisToken"
               }
             },
@@ -8802,7 +8802,7 @@
                       "referencedDeclaration": 2408,
                       "src": "578:5:13",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IDegisToken_$3817",
+                        "typeIdentifier": "t_contract$_IDegisToken_$3857",
                         "typeString": "contract IDegisToken"
                       }
                     },
@@ -8834,10 +8834,10 @@
                         "name": "IDegisToken",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3817,
+                        "referencedDeclaration": 3857,
                         "src": "586:11:13",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_IDegisToken_$3817_$",
+                          "typeIdentifier": "t_type$_t_contract$_IDegisToken_$3857_$",
                           "typeString": "type(contract IDegisToken)"
                         }
                       },
@@ -8852,13 +8852,13 @@
                       "src": "586:19:13",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_IDegisToken_$3817",
+                        "typeIdentifier": "t_contract$_IDegisToken_$3857",
                         "typeString": "contract IDegisToken"
                       }
                     },
                     "src": "578:27:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_IDegisToken_$3817",
+                      "typeIdentifier": "t_contract$_IDegisToken_$3857",
                       "typeString": "contract IDegisToken"
                     }
                   },
@@ -9047,7 +9047,7 @@
                               "referencedDeclaration": 2408,
                               "src": "819:5:13",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_IDegisToken_$3817",
+                                "typeIdentifier": "t_contract$_IDegisToken_$3857",
                                 "typeString": "contract IDegisToken"
                               }
                             },
@@ -9282,7 +9282,7 @@
                         "referencedDeclaration": 2408,
                         "src": "928:5:13",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_IDegisToken_$3817",
+                          "typeIdentifier": "t_contract$_IDegisToken_$3857",
                           "typeString": "contract IDegisToken"
                         }
                       },
@@ -9900,7 +9900,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-12-02T13:49:48.871Z",
+  "updatedAt": "2021-12-05T09:39:22.860Z",
   "devdoc": {
     "kind": "dev",
     "methods": {
