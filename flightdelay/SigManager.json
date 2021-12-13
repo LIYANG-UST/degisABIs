@@ -43,7 +43,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -56,7 +57,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -101,7 +103,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -134,7 +137,8 @@
       "name": "checkSignature",
       "outputs": [],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_newSigner\",\"type\":\"address\"}],\"name\":\"SignerAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_oldSigner\",\"type\":\"address\"}],\"name\":\"SignerRemoved\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"_SUBMIT_APPLICATION_TYPEHASH\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_newSigner\",\"type\":\"address\"}],\"name\":\"addSigner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"signature\",\"type\":\"bytes\"},{\"internalType\":\"string\",\"name\":\"_flightNumber\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"_userAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_premium\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_deadline\",\"type\":\"uint256\"}],\"name\":\"checkSignature\",\"outputs\":[],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"isValidSigner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_oldSigner\",\"type\":\"address\"}],\"name\":\"removeSigner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"addSigner(address)\":{\"params\":{\"_newSigner\":\"The new signer address\"}},\"checkSignature(bytes,string,address,uint256,uint256)\":{\"params\":{\"_deadline\":\"Deadline of a policy\",\"_flightNumber\":\"Flight number\",\"_premium\":\"Policy premium\",\"_userAddress\":\"User address\",\"signature\":\"65 byte array: [[v (1)], [r (32)], [s (32)]]\"}},\"isValidSigner(address)\":{\"params\":{\"_address\":\"The input address\"},\"returns\":{\"_0\":\"isValidSigner Whether this address is\"}},\"removeSigner(address)\":{\"params\":{\"_oldSigner\":\"The old signer address to be removed\"}}},\"title\":\"Signature Manager\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"addSigner(address)\":{\"notice\":\"Add a signer into valid signer list\"},\"checkSignature(bytes,string,address,uint256,uint256)\":{\"notice\":\"Check signature when buying a new policy (avoid arbitrary premium amount)\"},\"isValidSigner(address)\":{\"notice\":\"Check whether the address is a valid signer\"},\"removeSigner(address)\":{\"notice\":\"Remove a signer from the valid signer list\"}},\"notice\":\"Signature is used when submitting new applications.         The premium should be decided by the pricing model and be signed by a private key.         Other submission will not be accepted.         Please keep the signer key safe.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/SigManager.sol\":\"SigManager\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/cryptography/ECDSA.sol\":{\"keccak256\":\"0xbc991a1cf357ce19480831a40792c814238a3b5458134703682abd8aa39719fb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ab2e3313add3a233ad2d1e9b65cb7c0296bdbe159c6d631da2b1d027b4954926\",\"dweb:/ipfs/QmT8bVda92mptimLgonyq28qENq4sRgy6K3v118CvZcKdP\"]},\"@openzeppelin/contracts/utils/cryptography/draft-EIP712.sol\":{\"keccak256\":\"0xba18d725602452307e5b278ed4566616c63792d89f3a0388a6f285428c26e681\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ae8649b93777da3acd1cda2e7096d5663b9d414ac6a93fbafb22bfc34b8c0bb6\",\"dweb:/ipfs/QmdoZ6ZAj9YzCjKnNo2PmF7Xs8AP3NtiRJZNRzfZEjoy55\"]},\"project:/contracts/SigManager.sol\":{\"keccak256\":\"0x0f01994f5b8b6ed6702743e430ca4319da7d0c261590fdc0a32440d995eb88a0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b69f7ed7e3bc60bd3020ad635efadeb81c2ffc3b5c595e2a4c96b718ebcfb2d7\",\"dweb:/ipfs/QmTZFhHapmWJFU3h6g9UWj5rsvwacmXjQWWUMomQzHFVFq\"]},\"project:/contracts/interfaces/ISigManager.sol\":{\"keccak256\":\"0xa358a0e41d7ddba6d3581a852d12a9c4e778d48565f576f85ca0a3dd46bcb91a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9af51d08bcf0d79f6320c2bfa29e0f38500d9f76e6a71885735fd8ba791b01dd\",\"dweb:/ipfs/QmesjN3JFeKppexGbQqdDpq2uiZL9Tx9sD8AL7xDTkw2TF\"]}},\"version\":1}",
@@ -13510,6 +13514,12 @@
     "version": "0.8.9+commit.e5eed63a.Emscripten.clang"
   },
   "networks": {
+    "1": {
+      "events": {},
+      "links": {},
+      "address": "0x8a77718d3053184ee70ba79419DD4193eC7D6bA6",
+      "transactionHash": "0x147296a9444a762c21607ca29e53a6109023c6089fb1911dabf5e3861f9d2b01"
+    },
     "4": {
       "events": {},
       "links": {},
@@ -13518,7 +13528,8 @@
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-12-05T06:54:04.880Z",
+  "updatedAt": "2021-12-05T16:08:50.885Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {

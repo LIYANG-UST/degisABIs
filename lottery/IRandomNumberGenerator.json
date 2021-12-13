@@ -44,27 +44,27 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.9;\n\ninterface IRandomNumberGenerator {\n    /**\n     * Requests randomness from a user-provided seed\n     */\n    function getRandomNumber() external;\n\n    /**\n     * View latest lotteryId numbers\n     */\n    function viewLatestLotteryId() external view returns (uint256);\n\n    /**\n     * Views random result\n     */\n    function viewRandomResult() external view returns (uint32);\n}\n",
-  "sourcePath": "/Volumes/Store/src/Degis-Lucky/contracts/interfaces/IRandomNumberGenerator.sol",
+  "sourcePath": "/Volumes/Store/Degis/Degis-Lucky/contracts/interfaces/IRandomNumberGenerator.sol",
   "ast": {
     "absolutePath": "project:/contracts/interfaces/IRandomNumberGenerator.sol",
     "exportedSymbols": {
       "IRandomNumberGenerator": [
-        4832
+        5077
       ]
     },
-    "id": 4833,
+    "id": 5078,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4815,
+        "id": 5060,
         "literals": [
           "solidity",
           "0.8",
           ".9"
         ],
         "nodeType": "PragmaDirective",
-        "src": "32:22:15"
+        "src": "32:22:16"
       },
       {
         "abstract": false,
@@ -73,81 +73,81 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 4832,
+        "id": 5077,
         "linearizedBaseContracts": [
-          4832
+          5077
         ],
         "name": "IRandomNumberGenerator",
-        "nameLocation": "66:22:15",
+        "nameLocation": "66:22:16",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "documentation": {
-              "id": 4816,
+              "id": 5061,
               "nodeType": "StructuredDocumentation",
-              "src": "95:64:15",
+              "src": "95:64:16",
               "text": " Requests randomness from a user-provided seed"
             },
             "functionSelector": "dbdff2c1",
-            "id": 4819,
+            "id": 5064,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getRandomNumber",
-            "nameLocation": "173:15:15",
+            "nameLocation": "173:15:16",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4817,
+              "id": 5062,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "188:2:15"
+              "src": "188:2:16"
             },
             "returnParameters": {
-              "id": 4818,
+              "id": 5063,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "199:0:15"
+              "src": "199:0:16"
             },
-            "scope": 4832,
-            "src": "164:36:15",
+            "scope": 5077,
+            "src": "164:36:16",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 4820,
+              "id": 5065,
               "nodeType": "StructuredDocumentation",
-              "src": "206:48:15",
+              "src": "206:48:16",
               "text": " View latest lotteryId numbers"
             },
             "functionSelector": "fbe5d917",
-            "id": 4825,
+            "id": 5070,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "viewLatestLotteryId",
-            "nameLocation": "268:19:15",
+            "nameLocation": "268:19:16",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4821,
+              "id": 5066,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "287:2:15"
+              "src": "287:2:16"
             },
             "returnParameters": {
-              "id": 4824,
+              "id": 5069,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4823,
+                  "id": 5068,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4825,
-                  "src": "313:7:15",
+                  "scope": 5070,
+                  "src": "313:7:16",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -155,10 +155,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 4822,
+                    "id": 5067,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "313:7:15",
+                    "src": "313:7:16",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -167,48 +167,48 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "312:9:15"
+              "src": "312:9:16"
             },
-            "scope": 4832,
-            "src": "259:63:15",
+            "scope": 5077,
+            "src": "259:63:16",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 4826,
+              "id": 5071,
               "nodeType": "StructuredDocumentation",
-              "src": "328:38:15",
+              "src": "328:38:16",
               "text": " Views random result"
             },
             "functionSelector": "a1c4f55a",
-            "id": 4831,
+            "id": 5076,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "viewRandomResult",
-            "nameLocation": "380:16:15",
+            "nameLocation": "380:16:16",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4827,
+              "id": 5072,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "396:2:15"
+              "src": "396:2:16"
             },
             "returnParameters": {
-              "id": 4830,
+              "id": 5075,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4829,
+                  "id": 5074,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4831,
-                  "src": "422:6:15",
+                  "scope": 5076,
+                  "src": "422:6:16",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -216,10 +216,10 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 4828,
+                    "id": 5073,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "422:6:15",
+                    "src": "422:6:16",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint32",
                       "typeString": "uint32"
@@ -228,42 +228,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "421:8:15"
+              "src": "421:8:16"
             },
-            "scope": 4832,
-            "src": "371:59:15",
+            "scope": 5077,
+            "src": "371:59:16",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 4833,
-        "src": "56:376:15",
+        "scope": 5078,
+        "src": "56:376:16",
         "usedErrors": []
       }
     ],
-    "src": "32:401:15"
+    "src": "32:401:16"
   },
   "legacyAST": {
     "absolutePath": "project:/contracts/interfaces/IRandomNumberGenerator.sol",
     "exportedSymbols": {
       "IRandomNumberGenerator": [
-        4832
+        5077
       ]
     },
-    "id": 4833,
+    "id": 5078,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 4815,
+        "id": 5060,
         "literals": [
           "solidity",
           "0.8",
           ".9"
         ],
         "nodeType": "PragmaDirective",
-        "src": "32:22:15"
+        "src": "32:22:16"
       },
       {
         "abstract": false,
@@ -272,81 +272,81 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 4832,
+        "id": 5077,
         "linearizedBaseContracts": [
-          4832
+          5077
         ],
         "name": "IRandomNumberGenerator",
-        "nameLocation": "66:22:15",
+        "nameLocation": "66:22:16",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "documentation": {
-              "id": 4816,
+              "id": 5061,
               "nodeType": "StructuredDocumentation",
-              "src": "95:64:15",
+              "src": "95:64:16",
               "text": " Requests randomness from a user-provided seed"
             },
             "functionSelector": "dbdff2c1",
-            "id": 4819,
+            "id": 5064,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getRandomNumber",
-            "nameLocation": "173:15:15",
+            "nameLocation": "173:15:16",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4817,
+              "id": 5062,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "188:2:15"
+              "src": "188:2:16"
             },
             "returnParameters": {
-              "id": 4818,
+              "id": 5063,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "199:0:15"
+              "src": "199:0:16"
             },
-            "scope": 4832,
-            "src": "164:36:15",
+            "scope": 5077,
+            "src": "164:36:16",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 4820,
+              "id": 5065,
               "nodeType": "StructuredDocumentation",
-              "src": "206:48:15",
+              "src": "206:48:16",
               "text": " View latest lotteryId numbers"
             },
             "functionSelector": "fbe5d917",
-            "id": 4825,
+            "id": 5070,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "viewLatestLotteryId",
-            "nameLocation": "268:19:15",
+            "nameLocation": "268:19:16",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4821,
+              "id": 5066,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "287:2:15"
+              "src": "287:2:16"
             },
             "returnParameters": {
-              "id": 4824,
+              "id": 5069,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4823,
+                  "id": 5068,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4825,
-                  "src": "313:7:15",
+                  "scope": 5070,
+                  "src": "313:7:16",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -354,10 +354,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 4822,
+                    "id": 5067,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "313:7:15",
+                    "src": "313:7:16",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -366,48 +366,48 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "312:9:15"
+              "src": "312:9:16"
             },
-            "scope": 4832,
-            "src": "259:63:15",
+            "scope": 5077,
+            "src": "259:63:16",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
             "documentation": {
-              "id": 4826,
+              "id": 5071,
               "nodeType": "StructuredDocumentation",
-              "src": "328:38:15",
+              "src": "328:38:16",
               "text": " Views random result"
             },
             "functionSelector": "a1c4f55a",
-            "id": 4831,
+            "id": 5076,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "viewRandomResult",
-            "nameLocation": "380:16:15",
+            "nameLocation": "380:16:16",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4827,
+              "id": 5072,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "396:2:15"
+              "src": "396:2:16"
             },
             "returnParameters": {
-              "id": 4830,
+              "id": 5075,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 4829,
+                  "id": 5074,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 4831,
-                  "src": "422:6:15",
+                  "scope": 5076,
+                  "src": "422:6:16",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -415,10 +415,10 @@
                     "typeString": "uint32"
                   },
                   "typeName": {
-                    "id": 4828,
+                    "id": 5073,
                     "name": "uint32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "422:6:15",
+                    "src": "422:6:16",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint32",
                       "typeString": "uint32"
@@ -427,21 +427,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "421:8:15"
+              "src": "421:8:16"
             },
-            "scope": 4832,
-            "src": "371:59:15",
+            "scope": 5077,
+            "src": "371:59:16",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 4833,
-        "src": "56:376:15",
+        "scope": 5078,
+        "src": "56:376:16",
         "usedErrors": []
       }
     ],
-    "src": "32:401:15"
+    "src": "32:401:16"
   },
   "compiler": {
     "name": "solc",
@@ -449,7 +449,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-12-02T14:39:30.133Z",
+  "updatedAt": "2021-12-07T13:42:10.397Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
